@@ -1,0 +1,9 @@
+if SHIELD_SG1
+
+config ZMK_KEYBOARD_NAME
+    default "sg1"
+
+config BT_DEVICE_NAME
+    default "sg1"
+
+endif
