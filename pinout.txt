@@ -1,0 +1,15 @@
+b-               b+
+006   D1   raw   raw
+008   D0   gnd   gnd
+gnd   gnd  rst   rst
+gnd   gnd  vcc   vcc
+017   D2   D21   031
+020   D3   D20   029
+022   D4   D19   002
+024   D5   D18   115
+100   D6   D15   113
+011   D7   D14   111
+104   D8   D16   010
+106   D9   D10   009
+
+101 102 107
