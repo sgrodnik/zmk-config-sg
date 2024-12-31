@@ -15,10 +15,14 @@
 
         default {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//  Q    |  W  |  E  |  R  |  T  | |  Y  |  U  |  I  |    O    |  P   |
-//  A    |  S  |  D  |  F  |  G  | |  H  |  J  |  K  |    L    |  ;   |
-// Lsft/Z|  X  |  C  |  V  |  B  | |  N  |  M  |  ,  |    .    |Rsft//|
-//      | LCTL | Bspc/LMOD | SPC | | Del/Num | Ent | Sym |
+//     Q     W     E     R     T          ━┳━      Y     U     I     O     P     |
+//                                        ━┻━                                    |
+//     A     S     D     F     G          ━┳━      H     J     K     L     ;     |
+//                                        ━┻━                                    |
+//     Z     X     C     V     B     ?    ━┳━      N     M     ,     .     /     |
+//     Lsft                               ━┻━                        .     Rsft  |
+//                 LCTL  Bspc  SPC   Del  ━┳━Ent   Sym   ?     ?                 |
+//                       LMOD        Num  ━┻━                                    |
            bindings = <
             &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P
             &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI
