@@ -42,6 +42,14 @@
             bindings = <&kp>, <&kp>;
         };
 
+        swap: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <1>;
+        };
+
     };
     
     combos {
@@ -59,19 +67,19 @@
 
         default0 {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//     Q     W     E     R     T          ━┳━      Y     U     I     O     P     |tap
-//                                        ━┻━                                    |hold
-//     A     S     D     F     G          ━┳━      H     J     K     L     ;     |tap
-//     gui   alt   shift ctrl             ━┻━            ctrl  shift alt   gui   |hold
-//     Z     X     C     V     B     ?5   ━┳━      N     M     ,     .     /     |tap
-//     Lsft                               ━┻━                        .     Rsft  |hold
-//                 ctrl  ctrl  gui   SPC  ━┳━ SPC  L1    ret   mo2               |tap
-//                                   ctrl ━┻━ ctrl del                           |hold
+//     Q     W     E     R     T           ━┳━      Y     U     I     O     P     |tap
+//                                         ━┻━                                    |hold
+//     A     S     D     F     G           ━┳━      H     J     K     L     ;     |tap
+//     gui   alt   shift ctrl              ━┻━            ctrl  shift alt   gui   |hold
+//     Z     X     C     V     B     &swap ━┳━      N     M     ,     .     /     |tap
+//     Lsft                                ━┻━                        .     Rsft  |hold
+//                 ctrl  ctrl  gui   SPC   ━┳━ SPC  L1    ret   mo2               |tap
+//                                   ctrl  ━┻━ ctrl del                           |hold
            bindings = <
 //  1           2      3         4         5             thumbL    thumbR    5         4       3         2       1
     &kp Q       &kp W  &kp E     &kp R     &kp T                             &kp Y     &kp U   &kp I     &kp O   &kp P
     &hm hA      &hm hS &hm hD    &hm hF    &kp G                             &kp H     &hm hJ  &hm hK    &hm hL  &hm hSEMI
-    &mt LSHFT Z &kp X  &kp C     &kp V     &kp B         &kp N               &kp N     &kp M   &kp COMMA &kp DOT &mt RSHFT FSLH
+    &mt LSHFT Z &kp X  &kp C     &kp V     &kp B         &swap               &kp N     &kp M   &kp COMMA &kp DOT &mt RSHFT FSLH
                        &kp LCTRL &kp LCTRL &mt LGUI BSPC &sm LCSPC &sm RCSPC &lt 1 DEL &kp RET &mo 2
             >;
         };
