@@ -46,32 +46,18 @@
     
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-        combo_ret {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp RET>;
-        };
-        combo_bsp {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp BSPC>;
-        };
-        combo_esc2 {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp ESC>;
-        };
+        combo_esc { timeout-ms = <50>; key-positions = <2  3>;  bindings = <&kp ESC>; };
+        combo_bsp { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp BSPC>; };
+        combo_ret { timeout-ms = <50>; key-positions = <12 4>;  bindings = <&kp RET>; };
+        combo_ret { timeout-ms = <50>; key-positions = <21 22>; bindings = <&kp LC(X)>; };
+        combo_ret { timeout-ms = <50>; key-positions = <22 23>; bindings = <&kp LC(INS)>; };
+        combo_ret { timeout-ms = <50>; key-positions = <23 24>; bindings = <&kp LS(INS)>; };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default {
+        default0 {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //     Q     W     E     R     T          ━┳━      Y     U     I     O     P     |tap
 //                                        ━┻━                                    |hold
@@ -89,20 +75,20 @@
                        &kp LCTRL &kp LCTRL &mt LGUI BSPC &sm LCSPC &sm RCSPC &lt 1 DEL &kp RET &mo 2
             >;
         };
-        numbers {
+        numbers1 {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //  1  |    2   |  3     |  4  |  5  | |  6  |  7  |  8  |  9  |  0  |
 // TAB | BT_PRV | BT_NXT | VOL-| VOL+| |  <  |  v  |  ∧  |  >  |  '  |
 // Lsft| BT_SEL0| BT_CLR | MUTE|     | | HOME| END | PGUP| PGDN| Rsft|
 //               | LCTL | LMOD| LALT | | Num |     | BL-reset |
            bindings = <
-            &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-            &kp TAB &bt BT_PRV &bt BT_NXT &kp C_VOL_DN &kp C_VOL_UP &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
-            &kp LSHFT &bt BT_SEL 0 &bt BT_CLR &kp C_MUTE &none &kp HOME &kp HOME &kp END &kp PG_UP &kp PG_DN &kp RSHFT
-            &kp LCTRL &kp LGUI &kp LALT &trans &none &bootloader &kp Q &kp W
+    &kp N1    &kp N2       &kp N3     &kp N4       &kp N5       &kp N6      &kp N7   &kp N8  &kp N9    &kp N0
+    &kp TAB   &bt BT_PRV   &bt BT_NXT &kp C_VOL_DN &kp C_VOL_UP &kp LEFT    &kp DOWN &kp UP  &kp RIGHT &kp SQT
+    &kp LSHFT &bt BT_SEL 0 &bt BT_CLR &kp C_MUTE   &none        &kp HOME    &kp HOME &kp END &kp PG_UP &kp PG_DN qkp RSHFT
+    &kp LCTRL &kp LGUI     &kp LALT   &trans       &none        &bootloader &kp Q    &kp W
             >;
         };
-        symbols {
+        symbols2 {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // ESC |  F1 |  F2 |  F3 |  F4 | | OUT_USB | OUT_BLE |        |  =  |  -   |
 // CAPS|  F5 |  F6 |  F7 |  F8 | |    [    |    ]    |        |  `  |  \   |
