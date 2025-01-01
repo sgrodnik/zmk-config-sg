@@ -50,13 +50,6 @@
             ignored-key-positions = <1>;
         };
 
-        stiCS: sticky_ctrl_shift {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            quick-release;
-        };
-
     };
     
     combos {
