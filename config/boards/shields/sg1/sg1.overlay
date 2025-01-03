@@ -49,19 +49,19 @@
             , <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+    };
 
-        aliases {
-            led-red = &led0;
-            led-green = &led1;
-            led-blue = &led2;
-        };
+    aliases {
+        led-red = &led0;
+        led-green = &led1;
+        led-blue = &led2;
+    };
 
-        leds {
-            compatible = "gpio-leds";
-            status = "okay";
-            led0: led_0 { gpios = <&gpio0 20 GPIO_ACTIVE_HIGH>; };
-            led1: led_1 { gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>; };
-            led2: led_2 { gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>; };
-        };
+    leds {
+        compatible = "gpio-leds";
+        status = "okay";
+        led0: led_0 { gpios = <&gpio0 20 GPIO_ACTIVE_HIGH>; };
+        led1: led_1 { gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>; };
+        led2: led_2 { gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>; };
     };
 };
