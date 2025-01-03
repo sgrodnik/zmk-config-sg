@@ -74,7 +74,7 @@
 //├── 20      ──┼── 21   ──┼── 22      ──┼── 23     ──┼── 24     ──┼── 38    ──╮            ├── 25      ──┼── 26    ──┼── 27    ──┼── 28   ──┼── 29       ──┤
   &mt LSHFT Z   &kp X      &kp C         &kp V        &kp B        &swap                    &kp N         &kp M       &kp COMMA   &kp DOT    &mt RSHFT FSLH
 //╰──         ──┼──      ──┴── 30      ──┼── 31     ──┼── 32     ──┼── 33    ──┤╭── 34    ──┼── 35      ──┼── 36    ──┼── 37    ──┼──      ──┴──          ──╯
-                           &lt 1 SPACE   &lt 1 CAPS   &lt 2 TAB    &lt 3 SPACE  &lt 1 SPACE &lt 2 SPACE   &sk RCTRL   &sk RSHFT    >; };
+                           &sk LS(LCTRL) &lt 1 CAPS   &lt 2 TAB    &lt 3 SPACE  &lt 1 SPACE &lt 2 SPACE   &sk RSHFT   &sk RCTRL    >; };
 //                         ╰──         ──┴──        ──┴──        ──┴──       ──╯╰──       ──┴──         ──┴──       ──┴──       ──╯
         numbers1 { bindings = <
 //╭── 00      ──┬── 01     ──┬── 02     ──┬── 03     ──┬── 04      ──╮                        ╭── 05     ──┬── 06    ──┬── 07    ──┬── 08   ──┬── 09     ──╮
