@@ -98,11 +98,11 @@
 //                           ╰──        ──┴──        ──┴──         ──┴──       ──╯╰──       ──┴──        ──┴──       ──┴──       ──╯
         layer3Num { bindings = <
 //╭─00─       ──┬─01─      ──┬─02─      ──┬─03─      ──┬─04─       ──╮                        ╭─05─      ──┬─06─     ──┬─07─     ──┬─08─    ──┬─09─      ──╮
-  &GRAVE        &N7          &N8          &N9          &DOT                                   &trans       &trans      &trans      &trans     &trans
+  &kp GRAVE     &N7          &N8          &N9          &kp DOT                                &trans       &trans      &trans      &trans     &trans
 //├─10─       ──┼─11─      ──┼─12─      ──┼─13─      ──┼─14─       ──┤                        ├─15─      ──┼─16─     ──┼─17─     ──┼─18─    ──┼─19─      ──┤
-  &MINUS        &N4          &N5          &N6          &N0                                    &trans       &trans      &trans      &trans     &trans
+  &kp MINUS     &N4          &N5          &N6          &N0                                    &trans       &trans      &trans      &trans     &trans
 //├─20─       ──┼─21─      ──┼─22─      ──┼─23─      ──┼─24─       ──┼─38─     ──╮            ├─25─      ──┼─26─     ──┼─27─     ──┼─28─    ──┼─29─      ──┤
-  &EQUAL        &N1          &N2          &N3          &APOS         &trans                   &trans       &trans      &trans      &trans     &trans
+  &kp EQUAL     &N1          &N2          &N3          &kp APOS      &trans                   &trans       &trans      &trans      &trans     &trans
 //╰──         ──┴──        ──┼─30─      ──┼─31─      ──┼─32─       ──┼─33─     ──┤╭─34─     ──┼─35─      ──┼─36─     ──┼─37─     ──┼──      ──┴──        ──╯
                              &trans       &trans       &trans        &trans       &trans      &trans       &trans      &trans       >; };
 //                           ╰──        ──┴──        ──┴──         ──┴──       ──╯╰──       ──┴──        ──┴──       ──┴──       ──╯
