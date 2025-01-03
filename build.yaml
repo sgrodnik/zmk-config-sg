@@ -21,4 +21,4 @@
 include:
   - board: nice_nano_v2
     shield: sg1
-    artifact-name: sg1.01
+    artifact-name: sg1
