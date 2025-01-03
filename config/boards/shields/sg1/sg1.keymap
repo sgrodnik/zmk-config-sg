@@ -55,12 +55,12 @@
     
     combos {
         compatible = "zmk,combos";
-        combo_esc   { timeout-ms = <50>; key-positions = <02 03>; bindings = <&kp ESC    >; };
-        combo_bsp   { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp BSPC   >; };
-        combo_ret   { timeout-ms = <50>; key-positions = <12 04>; bindings = <&kp RET    >; };
-        combo_cut   { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp LC(X)  >; };
-        combo_copy  { timeout-ms = <50>; key-positions = <21 22>; bindings = <&kp LC(INS)>; };
-        combo_paste { timeout-ms = <50>; key-positions = <22 23>; bindings = <&kp LS(INS)>; };
+        combo_esc   { timeout-ms = <50>; key-positions = <02 03>; bindings = <&kp ESC    >; };  // ER
+        combo_bsp   { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp BSPC   >; };  // SD
+        combo_ret   { timeout-ms = <50>; key-positions = <12 04>; bindings = <&kp RET    >; };  // DT
+        combo_cut   { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp LC(X)  >; };  // ZX
+        combo_copy  { timeout-ms = <50>; key-positions = <21 22>; bindings = <&kp LC(INS)>; };  // XC
+        combo_paste { timeout-ms = <50>; key-positions = <22 23>; bindings = <&kp LS(INS)>; };  // CV
     };
 
     keymap {
