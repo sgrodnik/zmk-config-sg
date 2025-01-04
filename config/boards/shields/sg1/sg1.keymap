@@ -55,7 +55,7 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc   { timeout-ms = <50>; key-positions = <02 03   >; bindings = <&kp ESC    >;               };  // ER
+        combo_esc   { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&kp ESC    >;               };  // ER
         combo_esc2  { timeout-ms = <50>; key-positions = <11 13   >; bindings = <&kp ESC    >;               };  // SF
         combo_bsp   { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp BSPC   >; layers = <0>; };  // SD
         combo_del   { timeout-ms = <50>; key-positions = <11 12 10>; bindings = <&kp DEL    >;               };  // SDF
@@ -65,7 +65,7 @@
         combo_paste { timeout-ms = <50>; key-positions = <22 23   >; bindings = <&kp LS(INS)>;               };  // CV
         combo_home  { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp HOME   >; layers = <4>; };  // SD
         combo_end   { timeout-ms = <50>; key-positions = <12 13   >; bindings = <&kp END    >; layers = <4>; };  // DF
-        combo_rbkt  { timeout-ms = <50>; key-positions = <08 09   >; bindings = <&kp RBKT   >;               };  // OP
+        combo_rbkt  { timeout-ms = <50>; key-positions = < 8  9   >; bindings = <&kp RBKT   >;               };  // OP
         combo_lbkt  { timeout-ms = <50>; key-positions = <18 19   >; bindings = <&kp LBKT   >;               };  // L:
         combo_bslh  { timeout-ms = <50>; key-positions = <28 29   >; bindings = <&kp BSLH   >;               };  // >?
     };
