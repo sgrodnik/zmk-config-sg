@@ -57,9 +57,9 @@
         compatible = "zmk,combos";
         combo_esc   { timeout-ms = <50>; key-positions = <02 03   >; bindings = <&kp ESC    >;               };  // ER
         combo_esc2  { timeout-ms = <50>; key-positions = <11 13   >; bindings = <&kp ESC    >;               };  // SF
-        combo_bsp   { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp BSPC   >;               };  // SD
+        combo_bsp   { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp BSPC   >; layers = <0>; };  // SD
         combo_del   { timeout-ms = <50>; key-positions = <11 12 10>; bindings = <&kp DEL    >;               };  // SDF
-        combo_ret   { timeout-ms = <50>; key-positions = <12 13   >; bindings = <&kp RET    >;               };  // DF
+        combo_ret   { timeout-ms = <50>; key-positions = <12 13   >; bindings = <&kp RET    >; layers = <0>; };  // DF
         combo_cut   { timeout-ms = <50>; key-positions = <20 21   >; bindings = <&kp LC(X)  >;               };  // ZX
         combo_copy  { timeout-ms = <50>; key-positions = <21 22   >; bindings = <&kp LC(INS)>;               };  // XC
         combo_paste { timeout-ms = <50>; key-positions = <22 23   >; bindings = <&kp LS(INS)>;               };  // CV
