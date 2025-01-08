@@ -4,9 +4,3 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    steps:
-      - name: Send GET request to Telegram bot with build result
-        if: always()
-        run: |
-          BUILD_STATUS=${{ job.status }}
-          curl "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage?chat_id=<YOUR_CHAT_ID>&text=Build%20status:%20${BUILD_STATUS}"
