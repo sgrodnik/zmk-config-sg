@@ -64,7 +64,7 @@
     };
 
     macros {
-      ZMK_MACRO(task_manager
+      ZMK_MACRO(task_manager,
         wait-ms = <30>; tap-ms = <40>;
         bindings
           = <&macro_press   &kp LCTRL>
