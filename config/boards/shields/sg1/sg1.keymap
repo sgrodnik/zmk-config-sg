@@ -104,12 +104,12 @@
         combo_paste { timeout-ms = <50>; key-positions = <22 23   >; bindings = <&kp LS(INS)>; layers = <0  >; };  // CV
         combo_home  { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp HOME   >; layers = <2  >; };  // SD
         combo_end   { timeout-ms = <50>; key-positions = <12 13   >; bindings = <&kp END    >; layers = <2  >; };  // DF
-        combo_rbkt  { timeout-ms = <50>; key-positions = < 7  8   >; bindings = <&kp RBKT   >; layers = <0  >; };  // IOP
+        combo_rbkt  { timeout-ms = <50>; key-positions = < 7  8  9>; bindings = <&kp RBKT   >; layers = <0  >; };  // IOP
         combo_lbkt  { timeout-ms = <50>; key-positions = < 8  9   >; bindings = <&kp LBKT   >; layers = <0  >; };  // OP
         combo_bslh  { timeout-ms = <50>; key-positions = <28 29   >; bindings = <&kp BSLH   >; layers = <0  >; };  // >?
         combo_apos  { timeout-ms = <50>; key-positions = <18 19   >; bindings = <&kp APOS   >; layers = <0  >; };  // L:
         combo_task  { timeout-ms = <50>; key-positions = <00 01   >; bindings = <&task_manager>; layers = <0>; };  // QW
-        // combo_cshf  { timeout-ms = <50>; key-positions = <20 13   >; bindings = <&sk LS(LCTRL)>; layers = <0>; };  // ZF
+        combo_cshf  { timeout-ms = <50>; key-positions = <20 13   >; bindings = <&sk LS(LCTRL)>; layers = <0>; };  // ZF
     };
 
     keymap {
@@ -123,7 +123,7 @@
 //├── 20      ──┼── 21     ──┼── 22     ──┼── 23     ──┼── 24     ──┤                        ├── 25      ──┼── 26    ──┼── 27    ──┼── 28   ──┼── 29       ──┤
   &mt LSHFT Z   &mt LCTRL X  &kp C        &kp V        &kp B                                 &kp N         &kp M       &kp COMMA   &kp DOT    &mt RSHFT FSLH
 //╰──         ──┼── 30     ──┴── 31     ──┼── 32     ──┼── 33     ──┼── 34    ──╮╭── 35    ──┼── 36      ──┼── 37    ──┼── 38    ──┼── 39   ──┴──          ──╯
-               &sk LS(LCTRL) &lm 1 LSHIFT &sm 3 CAPS   &sm 2 TAB    &sm 1 SPACE  &lt 1 SPACE &lt 2 SPACE   &lt 3 SPACE &mo 4       &caps_word >; };
+               &sk LS(LCTRL) &lm 1 LSHIFT &lt 3 CAPS   &lt 2 TAB    &lt 1 SPACE  &lt 1 SPACE &lt 2 SPACE   &lt 3 SPACE &mo 4       &caps_word >; };
 //              ╰──        ──┴──        ──┴──        ──┴──        ──┴──       ──╯╰──       ──┴──         ──┴──       ──┴──       ──┴──      ──╯
         layer1Num { bindings = <
 //╭─00─       ──┬─01─      ──┬─02─      ──┬─03─      ──┬─04─      ──╮                         ╭─05─      ──┬─06─     ──┬─07─     ──┬─08─    ──┬─09─      ──╮
