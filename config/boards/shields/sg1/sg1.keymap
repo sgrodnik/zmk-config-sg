@@ -97,7 +97,7 @@
         combo_esc   { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&kp ESC    >; layers = <0 1>; };  // ER
         combo_esc2  { timeout-ms = <50>; key-positions = <11 13   >; bindings = <&kp ESC    >; layers = <0 1>; };  // SF
         combo_bsp   { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp BSPC   >; layers = <0 1>; };  // SD
-        combo_del   { timeout-ms = <50>; key-positions = <11 12 10>; bindings = <&kp DEL    >; layers = <0 1>; };  // SDF
+        combo_del   { timeout-ms = <50>; key-positions = <11 12 10>; bindings = <&kp DEL    >; layers = <0 1>; };  // ASD
         combo_ret   { timeout-ms = <50>; key-positions = <12 13   >; bindings = <&kp RET    >; layers = <0 1>; };  // DF
         combo_cut   { timeout-ms = <50>; key-positions = <20 21   >; bindings = <&kp LC(X)  >; layers = <0  >; };  // ZX
         combo_copy  { timeout-ms = <50>; key-positions = <21 22   >; bindings = <&kp LC(INS)>; layers = <0  >; };  // XC
@@ -110,6 +110,7 @@
         combo_apos  { timeout-ms = <50>; key-positions = <18 19   >; bindings = <&kp APOS   >; layers = <0  >; };  // L:
         combo_task  { timeout-ms = <50>; key-positions = <00 01   >; bindings = <&task_manager>; layers = <0>; };  // QW
         combo_cshf  { timeout-ms = <50>; key-positions = <20 13   >; bindings = <&sk LS(LCTRL)>; layers = <0>; };  // ZF
+        combo_caps  { timeout-ms = <50>; key-positions = <10 13   >; bindings = <&kp CAPS   >; layers = <0  >; };  // AF
     };
 
     keymap {
