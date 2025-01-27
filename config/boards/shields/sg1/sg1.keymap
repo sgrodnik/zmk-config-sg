@@ -73,6 +73,7 @@
             #binding-cells = <0>;
             bindings = <&lt 1 SPACE>, <&mo 4>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
     };
