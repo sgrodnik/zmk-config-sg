@@ -71,7 +71,7 @@
         sh1: space_layer_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt 1 SPACE>, <&kp N9>;
+            bindings = <&lt 1 SPACE>, <&mo 4>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
