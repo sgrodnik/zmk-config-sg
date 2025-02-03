@@ -3,8 +3,6 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: dhruvinsh
-      url-base: https://github.com/dhruvinsh
     - name: caksoylar
       url-base: https://github.com/caksoylar
     - name: urob
@@ -14,9 +12,6 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-tri-state
-      remote: dhruvinsh
-      revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
