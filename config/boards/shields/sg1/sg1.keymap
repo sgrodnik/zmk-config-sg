@@ -87,7 +87,7 @@
             quick-tap-ms = <300>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
-            // retro-tap;
+            hold-while-undecided;
         };
 
         sm: space_mod {
