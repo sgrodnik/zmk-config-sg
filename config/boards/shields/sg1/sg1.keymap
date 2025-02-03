@@ -35,14 +35,14 @@
 
       ZMK_MACRO(copy_all, wait-ms = <30>; tap-ms = <40>; bindings
           = <&macro_tap   &kp LC(Home)>
-          = <&macro_tap   &kp LC(LS(END))>
+          , <&macro_tap   &kp LC(LS(END))>
           , <&macro_tap   &kp LC(C)>
           ;
       )
 
       ZMK_MACRO(paste_all, wait-ms = <30>; tap-ms = <40>; bindings
           = <&macro_tap   &kp LC(Home)>
-          = <&macro_tap   &kp LC(LS(END))>
+          , <&macro_tap   &kp LC(LS(END))>
           , <&macro_tap   &kp LC(V)>
           ;
       )
