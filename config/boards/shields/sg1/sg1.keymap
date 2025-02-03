@@ -22,8 +22,7 @@
 
 / {
     macros {
-      ZMK_MACRO(task_manager,
-        wait-ms = <30>; tap-ms = <40>; bindings
+      ZMK_MACRO(task_manager, wait-ms = <30>; tap-ms = <40>; bindings
           = <&macro_press   &kp LCTRL>
           , <&macro_press   &kp LSHIFT>
           , <&macro_tap     &kp ESC>
@@ -32,24 +31,21 @@
           ;
       )
 
-      ZMK_MACRO(copy_all,
-        wait-ms = <30>; tap-ms = <40>; bindings
+      ZMK_MACRO(copy_all, wait-ms = <30>; tap-ms = <40>; bindings
           = <&macro_tap   &kp LC(HOME)>
           , <&macro_tap   &kp LC(LS(END))>
           , <&macro_tap   &kp LC(C)>
           ;
       )
 
-      ZMK_MACRO(paste_all,
-        wait-ms = <30>; tap-ms = <40>; bindings
+      ZMK_MACRO(paste_all, wait-ms = <30>; tap-ms = <40>; bindings
           = <&macro_tap   &kp LC(HOME)>
           , <&macro_tap   &kp LC(LS(END))>
           , <&macro_tap   &kp LC(V)>
           ;
       )
 
-      ZMK_MACRO(macro1,
-        wait-ms = <30>; tap-ms = <40>; bindings
+      ZMK_MACRO(macro1, wait-ms = <30>; tap-ms = <40>; bindings
           = <&macro_tap &kp RPAR &kp O &kp RPAR &kp O> ;
       )
 
