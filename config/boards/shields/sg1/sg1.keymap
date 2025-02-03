@@ -89,14 +89,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // swap: swapper {
-        //     compatible = "zmk,behavior-tri-state";
-        //     label = "SWAPPER";
-        //     #binding-cells = <0>;
-        //     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-        //     ignored-key-positions = <1>;
-        // };
-
         ltRep: behavior_layer_tap_key_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -111,6 +103,14 @@
             #binding-cells = <0>;
             bindings = <&lt 1 SPACE>, <&mo 5>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num_word: num_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <0>;
+            layers = <1>; // Replace NUM by index of numbers layer
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            ignore-numbers;
         };
 
     };
