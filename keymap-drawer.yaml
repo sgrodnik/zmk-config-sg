@@ -1,0 +1,319 @@
+# https://keymap-drawer.streamlit.app/
+
+# FILL IN below field with a value like {qmk_keyboard: ferris/sweep}
+# or {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 2}}
+# see https://github.com/caksoylar/keymap-drawer/blob/main/KEYMAP_SPEC.md#layout
+layout:
+  cols_thumbs_notation:
+    33333+5>> 5<<+33333
+layers:
+  default0:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LSHFT}
+  - {t: F, h: LCTRL}
+  - G
+  - H
+  - {t: J, h: RCTRL}
+  - {t: K, h: RSHIFT}
+  - {t: L, h: RALT}
+  - {t: ;, h: RGUI}
+  - {t: Z, h: LSHFT}
+  - {t: X, h: LCTRL}
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: RSHFT}
+  - {t: Sft+LCTRL, h: sticky}
+  - '&lm 1 LSHIFT'
+  - {t: CAPS, h: layer3Fun}
+  - {t: TAB, h: layer2Nav}
+  - {t: SPACE, h: layer1Num, s: layer5NumShift}
+  - {t: SPACE, h: layer1Num}
+  - {t: SPACE, h: layer2Nav}
+  - {t: SPACE, h: layer3Fun}
+  - layer4Num2
+  - '&num_word 1'
+  layer1Num:
+  - '`'
+  - '7'
+  - '8'
+  - '9'
+  - .
+  - '&msc SCRL_UP'
+  - {t: ▽, type: trans}
+  - INSERT
+  - {t: ▽, type: trans}
+  - PSCRN
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - '0'
+  - '&msc SCRL_DOWN'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - {t: ▽, type: trans}
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - ''''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_DOWN'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ;
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  layer2Nav:
+  - BRI UP
+  - HOME
+  - UP
+  - END
+  - PG UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BRI DN
+  - LEFT
+  - DOWN
+  - RIGHT
+  - PG DN
+  - HOME
+  - LEFT
+  - DOWN
+  - RIGHT
+  - END
+  - VOL DN
+  - VOL UP
+  - PLAY PAUSE
+  - NEXT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  layer3Fun:
+  - BRI UP
+  - F7
+  - F8
+  - F9
+  - F10
+  - OUT USB
+  - OUT BLE
+  - {t: ▽, type: trans}
+  - '&studio_unlock'
+  - '&bootloader'
+  - BRI DN
+  - F4
+  - F5
+  - F6
+  - F11
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F12
+  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&ind_bat'
+  - '&ind_con'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  layer4Num2:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  layer5NumShift:
+  - Sft+`
+  - '&'
+  - '*'
+  - (
+  - Sft+.
+  - '&msc SCRL_UP'
+  - {t: ▽, type: trans}
+  - INSERT
+  - {t: ▽, type: trans}
+  - PSCRN
+  - Sft+-
+  - $
+  - '%'
+  - ^
+  - )
+  - '&msc SCRL_DOWN'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - {t: ▽, type: trans}
+  - Sft+=
+  - '!'
+  - '@'
+  - '#'
+  - Sft+'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_DOWN'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+;
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [2, 3]
+  k: ESC
+  l: [default0, layer1Num]
+- p: [11, 13]
+  k: ESC
+  l: [default0, layer1Num]
+- p: [11, 12]
+  k: BSPC
+  l: [default0, layer1Num]
+- p: [11, 12, 10]
+  k: DEL
+  l: [default0, layer1Num]
+- p: [12, 13]
+  k: RET
+  l: [default0, layer1Num]
+- p: [16, 17]
+  k: RET
+  l: [default0, layer1Num]
+- p: [20, 21]
+  k: Ctl+X
+  l: [default0]
+- p: [21, 22]
+  k: Ctl+INS
+  l: [default0]
+- p: [22, 23]
+  k: Sft+INS
+  l: [default0]
+- p: [11, 12]
+  k: HOME
+  l: [layer2Nav]
+- p: [12, 13]
+  k: END
+  l: [layer2Nav]
+- p: [7, 8, 9]
+  k: ']'
+  l: [default0]
+- p: [8, 9]
+  k: '['
+  l: [default0]
+- p: [28, 29]
+  k: \
+  l: [default0]
+- p: [18, 19]
+  k: ''''
+  l: [default0]
+- p: [0, 1]
+  k: '&task_manager'
+  l: [default0]
+- p: [20, 13]
+  k: {t: Sft+LCTRL, h: sticky}
+  l: [default0]
+- p: [10, 13]
+  k: CAPS
+  l: [default0]
+- p: [21, 22]
+  k: '&copy_all'
+  l: [layer1Num]
+- p: [22, 23]
+  k: '&paste_all'
+  l: [layer1Num]
+- p: [7, 16]
+  k: '&macro1'
+  l: [default0]
