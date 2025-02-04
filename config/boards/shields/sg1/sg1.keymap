@@ -51,7 +51,7 @@
       )
 
         lm: layer_mod {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <2>;
@@ -69,7 +69,7 @@
         };
 
         ll: layer_mod2 {
-            compatible = "zmk,behavior-macro-two-param";
+            compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <0>;
