@@ -68,7 +68,7 @@
                 ;
         };
 
-        ll: layer_mod2 {
+        l1sh_macro: layer1_shift {
             compatible = "zmk,behavior-macro";
             wait-ms = <30>;
             tap-ms = <30>;
@@ -102,11 +102,12 @@
             // retro-tap;
         };
 
-        sh1: space_layer_shift {
+        space1sh: space_layer1_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt 1 SPACE>, <&ll>;
+            bindings = <&lt 1 SPACE>, <&l1sh_macro>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         sp1sh: tap_dance_mod_tap {
@@ -155,7 +156,7 @@
 //├── 20      ──┼── 21     ──┼── 22     ──┼── 23     ──┼── 24     ──┤                        ├── 25      ──┼── 26    ──┼── 27    ──┼── 28   ──┼── 29       ──┤
   &ht LSHFT Z   &ht LCTRL X  &kp C        &kp V        &kp B                                 &kp N         &kp M       &kp COMMA   &kp DOT    &ht RSHFT FSLH
 //╰──         ──┼── 30     ──┴── 31     ──┼── 32     ──┼── 33     ──┼── 34    ──╮╭── 35    ──┼── 36      ──┼── 37    ──┼── 38    ──┼── 39   ──┴──          ──╯
-               &sk LS(LCTRL) &lm 1 LSHIFT &lt 3 CAPS   &lt 2 TAB    &sp1sh       &ll         &lt 2 SPACE   &lt 3 SPACE &mo 4       &num_word 1>; };
+               &sk LS(LCTRL) &lm 1 LSHIFT &lt 3 CAPS   &lt 2 TAB    &space1sh    &ll         &lt 2 SPACE   &lt 3 SPACE &mo 4       &num_word 1>; };
 //              ╰──        ──┴──        ──┴──        ──┴──        ──┴──       ──╯╰──       ──┴──         ──┴──       ──┴──       ──┴──      ──╯
         layer1Num { bindings = <
 //╭─00─       ──┬─01─      ──┬─02─      ──┬─03─      ──┬─04─      ──╮                         ╭─05─      ──┬─06─     ──┬─07─     ──┬─08─    ──┬─09─      ──╮
