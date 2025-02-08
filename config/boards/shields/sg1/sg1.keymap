@@ -124,6 +124,7 @@
         combo_esc2  { timeout-ms = <50>; key-positions = <11 13   >; bindings = <&kp ESC      >; layers = <0 1>; };  // SF
         combo_bsp   { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp BSPC     >; layers = <0 1>; };  // SD
         combo_del   { timeout-ms = <50>; key-positions = <11 12 10>; bindings = <&kp DEL      >; layers = <0 1>; };  // ASD
+        combo_del2  { timeout-ms = <50>; key-positions = <11 12 13>; bindings = <&kp DEL      >; layers = <0 1>; };  // SDF
         combo_ret   { timeout-ms = <50>; key-positions = <12 13   >; bindings = <&kp RET      >; layers = <0 1>; };  // DF
         combo_retR  { timeout-ms = <50>; key-positions = <16 17   >; bindings = <&kp RET      >; layers = <0 1>; };  // JK
         combo_cut   { timeout-ms = <50>; key-positions = <20 21   >; bindings = <&kp LC(X)    >; layers = <0  >; };  // ZX
@@ -143,6 +144,8 @@
         combo_macro1{ timeout-ms = <50>; key-positions = < 7 16   >; bindings = <&macro1      >; layers = <0  >; };  // IJ
         combo_sh1   { timeout-ms = <50>; key-positions = <13 34   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // FSpace
         combo_sh1_  { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // ER
+        combo_capsw { key-positions = <10 20>; bindings = <&caps_word>; layers = <0>; };  // AZ
+        combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>; layers = <0>; };  // DK
     };
 
     keymap {
