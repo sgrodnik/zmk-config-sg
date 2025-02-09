@@ -110,13 +110,6 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        sp1sh: tap_dance_mod_tap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt 1 SPACE>, <&lm 1 LSHIFT>;
-        };
-
         td_pb: tap_dance_paren_bracket {
             compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp LBKT>; // ( [
@@ -127,6 +120,8 @@
             bindings = <&kp RBRC>, <&kp LT>; // { <
         };
 
+        td_dot: tap_dot_comma {
+            compatible = "zmk,behavior-tap-dance"; bindings = <&kp KP_DOT>, <&kp KP_COMMA>; // { <
     };
 
     combos {
@@ -175,7 +170,7 @@
 //              ╰──        ──┴──        ──┴──        ──┴──        ──┴──       ──╯╰──       ──┴──         ──┴──       ──┴──       ──┴──      ──╯
         layer1Num { bindings = <
 //╭─00─       ──┬─01─      ──┬─02─      ──┬─03─      ──┬─04─      ──╮                         ╭─05─      ──┬─06─     ──┬─07─     ──┬─08─    ──┬─09─      ──╮
-  &kp GRAVE     &kp N7       &kp N8       &kp N9       &kp DOT                                &msc SCRL_UP &trans      &kp INSERT  &trans     &kp PSCRN
+  &kp GRAVE     &kp N7       &kp N8       &kp N9       &td_dot                                &msc SCRL_UP &trans      &kp INSERT  &trans     &kp PSCRN
 //├─10─       ──┼─11─      ──┼─12─      ──┼─13─      ──┼─14─      ──┤                         ├─15─      ──┼─16─     ──┼─17─     ──┼─18─    ──┼─19─      ──┤
   &kp MINUS     &kp N4       &kp N5       &kp N6       &kp N0                                 &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_RIGHT &trans
 //├─20─       ──┼─21─      ──┼─22─      ──┼─23─      ──┼─24─      ──┤                         ├─25─      ──┼─26─     ──┼─27─     ──┼─28─    ──┼─29─      ──┤
