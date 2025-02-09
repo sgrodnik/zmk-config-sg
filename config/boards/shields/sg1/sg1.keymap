@@ -121,7 +121,7 @@
         };
 
         td_dot: tap_dot_comma {
-            compatible = "zmk,behavior-tap-dance"; bindings = <&kp KP_DOT>, <&kp KP_COMMA>; // { <
+            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; bindings = <&kp KP_DOT>, <&kp KP_COMMA>; // { <
     };
 
     combos {
