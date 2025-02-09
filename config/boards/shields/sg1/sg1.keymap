@@ -93,6 +93,20 @@
           , <&macro_release &kp LALT>
           ;
       )
+
+      ZMK_MACRO(m_slash, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 47 = /
+          = <&macro_press   &kp LALT>
+          , <&macro_tap     &kp KP_N4 &kp KP_N7>
+          , <&macro_release &kp LALT>
+          ;
+      )
+
+      ZMK_MACRO(m_backslash, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 92 = \
+          = <&macro_press   &kp LALT>
+          , <&macro_tap     &kp KP_N9 &kp KP_N2>
+          , <&macro_release &kp LALT>
+          ;
+      )
     };
 
     behaviors {
@@ -134,9 +148,14 @@
             bindings = <&kp RBRC>, <&kp LT>; // { <
         };
 
-        td_dot: tap_dot_comma {
+        td_dot: tap_dance_dot_comma {
             compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>;
             bindings = <&m_dot>, <&m_com>;
+        };
+
+        td_slash: tap_dance_slash_backslash {
+            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>;
+            bindings = <&m_slash>, <&m_backslash>;
         };
     };
 
@@ -169,6 +188,7 @@
         combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>; layers = <0>; };  // DK
         combo_brack1{ key-positions = <03 04>; bindings = <&td_pb>; layers = <0>; };  // RT
         combo_brack2{ key-positions = <13 14>; bindings = <&td_ba>; layers = <0>; };  // FG
+        combo_slash { key-positions = <13 14>; bindings = <&td_slash>; layers = <0>; };  // VB
     };
 
     keymap {
