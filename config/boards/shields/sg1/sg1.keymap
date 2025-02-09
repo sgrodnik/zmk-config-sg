@@ -186,8 +186,8 @@
         combo_sh1_  { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // ER
         combo_capsw { key-positions = <10 20>; bindings = <&caps_word>;     layers = <0>; };  // AZ
         combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>;     layers = <0>; };  // DK
-        combo_brack1{ key-positions = <03 04>; bindings = <&paren_bracket>; layers = <0>; };  // RT
-        combo_brack2{ key-positions = <13 14>; bindings = <&brace_angle>;   layers = <0>; };  // FG
+        combo_brack1{ key-positions = <03 04>; bindings = <&td_paren_bracket>; layers = <0>; };  // RT
+        combo_brack2{ key-positions = <13 14>; bindings = <&td_brace_angle>;   layers = <0>; };  // FG
         combo_slash { key-positions = <13 14>; bindings = <&td_slash>;      layers = <0>; };  // VB
     };
 
