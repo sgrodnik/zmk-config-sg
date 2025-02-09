@@ -79,6 +79,20 @@
                 , <&macro_release &mo 1 &kp LSHFT>
                 ;
         };
+
+      ZMK_MACRO(m_dot, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 46 = .
+          = <&macro_press   &kp LALT>
+          , <&macro_tap     &kp KP_N4 &kp KP_N6>
+          , <&macro_release &kp LALT>
+          ;
+      )
+
+      ZMK_MACRO(m_com, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 44 = ,
+          = <&macro_press   &kp LALT>
+          , <&macro_tap     &kp KP_N4 &kp KP_N4>
+          , <&macro_release &kp LALT>
+          ;
+      )
     };
 
     behaviors {
@@ -121,8 +135,8 @@
         };
 
         td_dot: tap_dot_comma {
-            compatible = "zmk,behavior-tap-dance";
-            bindings = <&kp KP_DOT>, <&kp KP_COMMA>;
+            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>;
+            bindings = <&m_dot>, <&m_com>;
         };
     };
 
