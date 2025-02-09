@@ -117,6 +117,16 @@
             bindings = <&lt 1 SPACE>, <&lm 1 LSHIFT>;
         };
 
+        td_brace1: tap_dance_brace1 {
+            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
+            bindings = <&kp LPAR>, <&kp LBKT>; // ( [
+        };
+
+        td_brace2: tap_dance_brace2 {
+            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
+            bindings = <&kp RBRC>, <&kp LT>; // { <
+        };
+
     };
 
     combos {
@@ -146,6 +156,8 @@
         combo_sh1_  { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // ER
         combo_capsw { key-positions = <10 20>; bindings = <&caps_word>; layers = <0>; };  // AZ
         combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>; layers = <0>; };  // DK
+        combo_brace1{ key-positions = <03 04>; bindings = <&pd_brace1>; layers = <0>; };  // RT
+        combo_brace2{ key-positions = <13 14>; bindings = <&pd_brace2>; layers = <0>; };  // FG
     };
 
     keymap {
