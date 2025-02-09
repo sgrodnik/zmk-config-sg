@@ -101,7 +101,7 @@
           ;
       )
 
-      ZMK_MACRO(m_backslash, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 92 = \
+      ZMK_MACRO(m_backslash, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 92 = backslash
           = <&macro_press   &kp LALT>
           , <&macro_tap     &kp KP_N9 &kp KP_N2>
           , <&macro_release &kp LALT>
