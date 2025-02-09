@@ -213,7 +213,7 @@
 //╭─00─       ──┬─01─      ──┬─02─      ──┬─03─      ──┬─04─      ──╮                         ╭─05─      ──┬─06─     ──┬─07─     ──┬─08─    ──┬─09─      ──╮
   &kp GRAVE     &mt F7 N7    &mt F8 N8    &mt F9 N9    &mt F12 td_dot                         &msc SCRL_UP &trans      &kp INSERT  &trans     &kp PSCRN
 //├─10─       ──┼─11─      ──┼─12─      ──┼─13─      ──┼─14─      ──┤                         ├─15─      ──┼─16─     ──┼─17─     ──┼─18─    ──┼─19─      ──┤
-  &kp MINUS     &mt F4 N4    &mt F5 N5    &mt F6 N6    &mt F10 N10                            &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_RIGHT &trans
+  &kp MINUS     &mt F4 N4    &mt F5 N5    &mt F6 N6    &mt F10 N0                             &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_RIGHT &trans
 //├─20─       ──┼─21─      ──┼─22─      ──┼─23─      ──┼─24─      ──┤                         ├─25─      ──┼─26─     ──┼─27─     ──┼─28─    ──┼─29─      ──┤
   &kp EQUAL     &mt F1 N1    &mt F2 N2    &mt F3 N3    &mt F11 APOS                           &trans       &trans      &mmv MOVE_DOWN      &trans     &trans
 //╰──         ──┼── 30     ──┴── 31     ──┼── 32     ──┼── 33     ──┼── 34    ──╮╭── 35     ──┼── 36     ──┼── 37    ──┼── 38    ──┼── 39   ──┴──        ──╯
