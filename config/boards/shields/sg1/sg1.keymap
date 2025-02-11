@@ -148,7 +148,7 @@
             mods = <(MOD_LSFT)>; keep-mods = <(MOD_LSFT)>;
         };
 
-        tab2ctrl: space_layer1_shift {
+        tab2ctrl: tab_layer2_ctrl {
             compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>;
             bindings = <&lt 2 TAB>, <&layer_mod 2 LCTRL>;
             mods = <(MOD_LCTRL)>; keep-mods = <(MOD_LCTRL)>;
