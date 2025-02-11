@@ -194,15 +194,15 @@
             bindings = <&m_slash>, <&m_backslash>;
         };
     };
-//                           hold        tap
-#define mt_paren_bracket mt m_lbkt      m_lpar
-#define mt_brace_angle   mt m_lt        m_lbrc
-#define mt_semi_colon    mt m_colon     m_semicolon
-#define mt_quote_apos    mt m_apos      m_quote
-#define mt_under_minus   mt MINUS       UNDER
-#define mt_slash         mt m_backslash m_slash
-#define mt_min_plus      mt PLUS        MINUS
-#define mt_dot           mt m_com       m_dot
+//                          hold         tap
+#define mt_paren_bracket mt &m_lbkt      &m_lpar
+#define mt_brace_angle   mt &m_lt        &m_lbrc
+#define mt_semi_colon    mt &m_colon     &m_semicolon
+#define mt_quote_apos    mt &m_apos      &m_quote
+#define mt_under_minus   mt MINUS        UNDER
+#define mt_slash         mt &m_backslash &m_slash
+#define mt_min_plus      mt PLUS         MINUS
+#define mt_dot           mt &m_com       &m_dot
 
     combos {
         compatible = "zmk,combos";
