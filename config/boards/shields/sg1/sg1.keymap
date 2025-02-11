@@ -194,15 +194,6 @@
             bindings = <&m_slash>, <&m_backslash>;
         };
     };
-//                          hold         tap
-#define mt_paren_bracket mt &m_lbkt      &m_lpar
-#define mt_brace_angle   mt &m_lt        &m_lbrc
-#define mt_semi_colon    mt &m_colon     &m_semicolon
-#define mt_quote_apos    mt &m_apos      &m_quote
-#define mt_under_minus   mt MINUS        UNDER
-#define mt_slash         mt &m_backslash &m_slash
-#define mt_min_plus      mt PLUS         MINUS
-#define mt_dot           mt &m_com       &m_dot
 
     combos {
         compatible = "zmk,combos";
@@ -229,16 +220,16 @@
         combo_macro1{ timeout-ms = <50>; key-positions = < 7 16   >; bindings = <&macro1      >; layers = <0  >; };  // IJ
         combo_sh1   { timeout-ms = <50>; key-positions = <12 34   >; bindings = <&layer_mod 1 LSHIFT>; layers = <0 1>; slow-release;};  // DSpace
         // combo_sh1_  { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // ER
-        combo_capsw { key-positions = <10 20>; bindings = <&caps_word>;        layers = <0>; };  // AZ
-        combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>;        layers = <0>; };  // DK
-        combo_brack1{ key-positions = <03 04>; bindings = <&mt_paren_bracket>; layers = <0>; };  // RT
-        combo_brack2{ key-positions = <13 14>; bindings = <&mt_brace_angle>;   layers = <0>; };  // FG
-        combo_colon { key-positions = <03 13>; bindings = <&mt_semi_colon>;    layers = <0>; };  // RF
-        combo_quote { key-positions = <02 12>; bindings = <&mt_quote_apos>;    layers = <0>; };  // ED
-        combo_under { key-positions = <13 23>; bindings = <&mt_under_minus>;   layers = <0>; };  // FV
-        combo_slash { key-positions = <23 24>; bindings = <&mt_slash>;         layers = <0>; };  // VB
-        combo_search{ key-positions = <22 13>; bindings = <&m_search>;         layers = <0>; };  // CF
-        combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;       layers = <0>; };  // GSpace
+        combo_capsw { key-positions = <10 20>; bindings = <&caps_word>;                layers = <0>; };  // AZ
+        combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>;                layers = <0>; };  // DK
+        combo_brack1{ key-positions = <03 04>; bindings = <&mt &m_lbkt &m_lpar>;       layers = <0>; };  // RT
+        combo_brack2{ key-positions = <13 14>; bindings = <&mt &m_lt &m_lbrc>;         layers = <0>; };  // FG
+        combo_colon { key-positions = <03 13>; bindings = <&mt &m_colon &m_semicolon>; layers = <0>; };  // RF
+        combo_quote { key-positions = <02 12>; bindings = <&mt &m_apos &m_quote>;      layers = <0>; };  // ED
+        combo_under { key-positions = <13 23>; bindings = <&mt MINUS UNDER>;           layers = <0>; };  // FV
+        combo_slash { key-positions = <23 24>; bindings = <&mt &m_backslash &m_slash>; layers = <0>; };  // VB
+        combo_search{ key-positions = <22 13>; bindings = <&m_search>;                 layers = <0>; };  // CF
+        combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;               layers = <0>; };  // GSpace
     };
 
     keymap {
@@ -254,6 +245,9 @@
 //╰──         ──┼── 30     ──┴── 31     ──┼── 32     ──┼── 33     ──┼── 34    ──╮╭── 35    ──┼── 36      ──┼── 37    ──┼── 38    ──┼── 39   ──┴──          ──╯
                 &trans       &trans       &mo 3        &tab2ctrl    &space1sh    &lt 1 SPACE &lt 2 RET     &lt 3 ESC   &mo 4       &num_word 1>; };
 //              ╰──        ──┴──        ──┴──        ──┴──        ──┴──       ──╯╰──       ──┴──         ──┴──       ──┴──       ──┴──      ──╯
+//                          hold         tap
+#define mt_dot           mt m_com       m_dot
+#define mt_min_plus      mt PLUS         MINUS
         layer1Num { bindings = <
 //╭─00─       ──┬─01─      ──┬─02─      ──┬─03─      ──┬─04─      ──╮                         ╭─05─      ──┬─06─     ──┬─07─     ──┬─08─    ──┬─09─      ──╮
   &kp GRAVE     &mt F7 N7    &mt F8 N8    &mt F9 N9    &mt_dot                                &msc SCRL_UP &trans      &kp INSERT  &trans     &kp PSCRN
