@@ -108,6 +108,30 @@
           ;
       )
 
+      ZMK_MACRO(m_colon, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 58 = colon
+          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N8>, <&macro_release &kp LALT>; )
+
+      ZMK_MACRO(m_semicolon, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 59 = semicolon
+          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N9>, <&macro_release &kp LALT>; )
+
+      ZMK_MACRO(m_lpar, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 40 = (
+          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N9>, <&macro_release &kp LALT>; )
+
+      ZMK_MACRO(m_lbkt, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 91 = [
+          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N9 &kp KP_N1>, <&macro_release &kp LALT>; )
+
+      ZMK_MACRO(m_lbrc, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 123 = {
+          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>, <&macro_release &kp LALT>; )
+
+      ZMK_MACRO(m_lt, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 60 = <
+          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N0>, <&macro_release &kp LALT>; )
+
+      ZMK_MACRO(m_quote, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 34 = "
+          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N4>, <&macro_release &kp LALT>; )
+
+      ZMK_MACRO(m_apos, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 39 = '
+          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N9>, <&macro_release &kp LALT>; )
+
       ZMK_MACRO(m_search, wait-ms = <30>; tap-ms = <40>; bindings
           = <&macro_tap &kp LC(C) &kp LC(F) &kp LC(V)>;
       )
@@ -144,12 +168,22 @@
 
         td_paren_bracket: tap_dance_paren_bracket {
             compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&kp LPAR>, <&kp LBKT>; // ( [
+            bindings = <&m_lpar>, <&m_lbkt>; // ( [
         };
 
         td_brace_angle: tap_dance_brace_angle {
             compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&kp LBRC>, <&kp LT>; // { <
+            bindings = <&m_lbrc>, <&m_lt>; // { <
+        };
+
+        td_semi_colon: tap_dance_semicolon_colon {
+            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
+            bindings = <&m_semicolon>, <&m_colon>; // ; :
+        };
+
+        td_quote_apos: tap_dance_quote_apos {
+            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
+            bindings = <&m_quote>, <&m_apos>; // " '
         };
 
         td_dot: tap_dance_dot_comma {
@@ -192,6 +226,8 @@
         combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>;        layers = <0>; };  // DK
         combo_brack1{ key-positions = <03 04>; bindings = <&td_paren_bracket>; layers = <0>; };  // RT
         combo_brack2{ key-positions = <13 14>; bindings = <&td_brace_angle>;   layers = <0>; };  // FG
+        combo_colon { key-positions = <03 13>; bindings = <&td_semi_colon>;    layers = <0>; };  // RF
+        combo_quote { key-positions = <02 12>; bindings = <&td_quote_apos>;    layers = <0>; };  // ED
         combo_slash { key-positions = <23 24>; bindings = <&td_slash>;         layers = <0>; };  // VB
         combo_search{ key-positions = <22 13>; bindings = <&m_search>;         layers = <0>; };  // CF
     };
