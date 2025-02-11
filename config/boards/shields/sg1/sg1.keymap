@@ -229,6 +229,7 @@
         combo_under { key-positions = <13 23>; bindings = <&td_under_minus>;   layers = <0>; };  // FV
         combo_slash { key-positions = <23 24>; bindings = <&td_slash>;         layers = <0>; };  // VB
         combo_search{ key-positions = <22 13>; bindings = <&m_search>;         layers = <0>; };  // CF
+        combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;       layers = <0>; };  // GSpace
     };
 
     keymap {
