@@ -142,14 +142,15 @@
             // retro-tap;
         };
 
-// #define stuff
-        ht_dot:           hold_tap_dot           { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_com>,       <&m_dot>; };
-        ht_paren_bracket: hold_tap_paren_bracket { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_lbkt>,      <&m_lpar>; };
-        ht_brace_angle:   hold_tap_brace_angle   { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_lt>,        <&m_lbrc>; };
-        ht_semi_colon:    hold_tap_semi_colon    { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_colon>,     <&m_semicolon>; };
-        ht_quote_apos:    hold_tap_quote_apos    { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_apos>,      <&m_quote>; };
-        ht_under_minus:   hold_tap_under_minus   { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&kp MINUS>,    <&kp UNDER>; };
-        ht_slash:         hold_tap_slash         { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_backslash>, <&m_slash>; };
+#define stuff compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>;
+        ht_dot:           hold_tap_dot           { stuff bindings = <&m_com>, <&m_dot>; };
+        ht_paren_bracket: hold_tap_paren_bracket { stuff bindings = <&m_lbkt>, <&m_lpar>; };
+        ht_brace_angle:   hold_tap_brace_angle   { stuff bindings = <&m_lt>, <&m_lbrc>; };
+        ht_semi_colon:    hold_tap_semi_colon    { stuff bindings = <&m_colon>, <&m_semicolon>; };
+        ht_quote_apos:    hold_tap_quote_apos    { stuff bindings = <&m_apos>, <&m_quote>; };
+        // ht_under_minus:   hold_tap_under_minus   { stuff bindings = <&kp MINUS>, <&kp UNDER>; };
+        ht_slash:         hold_tap_slash         { stuff bindings = <&m_backslash>, <&m_slash>; };
+#define mt_under_minus      mt MINUS         UNDER
 
         space1sh: space_layer1_shift {
             compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>;
@@ -235,7 +236,7 @@
         combo_brack2{ key-positions = <13 14>; bindings = <&ht_brace_angle   0 0>; layers = <0>; };  // FG
         combo_colon { key-positions = <03 13>; bindings = <&ht_semi_colon    0 0>; layers = <0>; };  // RF
         combo_quote { key-positions = <02 12>; bindings = <&ht_quote_apos    0 0>; layers = <0>; };  // ED
-        combo_under { key-positions = <13 23>; bindings = <&ht_under_minus   0 0>; layers = <0>; };  // FV
+        combo_under { key-positions = <13 23>; bindings = <&mt_under_minus      >; layers = <0>; };  // FV
         combo_slash { key-positions = <23 24>; bindings = <&ht_slash         0 0>; layers = <0>; };  // VB
         combo_search{ key-positions = <22 13>; bindings = <&m_search>;            layers = <0>; };  // CF
         combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;          layers = <0>; };  // GSpace
