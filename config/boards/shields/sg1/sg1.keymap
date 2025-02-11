@@ -142,14 +142,14 @@
             // retro-tap;
         };
 
-#define stuff compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>;
-        ht_dot:           hold_tap_dot           { stuff bindings = <&m_com>,       <&m_dot>; };
-        ht_paren_bracket: hold_tap_paren_bracket { stuff bindings = <&m_lbkt>,      <&m_lpar>; };
-        ht_brace_angle:   hold_tap_brace_angle   { stuff bindings = <&m_lt>,        <&m_lbrc>; };
-        ht_semi_colon:    hold_tap_semi_colon    { stuff bindings = <&m_colon>,     <&m_semicolon>; };
-        ht_quote_apos:    hold_tap_quote_apos    { stuff bindings = <&m_apos>,      <&m_quote>; };
-        ht_under_minus:   hold_tap_under_minus   { stuff bindings = <&kp MINUS>,    <&kp UNDER>; };
-        ht_slash:         hold_tap_slash         { stuff bindings = <&m_backslash>, <&m_slash>; };
+// #define stuff
+        ht_dot:           hold_tap_dot           { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_com>,       <&m_dot>; };
+        ht_paren_bracket: hold_tap_paren_bracket { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_lbkt>,      <&m_lpar>; };
+        ht_brace_angle:   hold_tap_brace_angle   { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_lt>,        <&m_lbrc>; };
+        ht_semi_colon:    hold_tap_semi_colon    { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_colon>,     <&m_semicolon>; };
+        ht_quote_apos:    hold_tap_quote_apos    { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_apos>,      <&m_quote>; };
+        ht_under_minus:   hold_tap_under_minus   { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&kp MINUS>,    <&kp UNDER>; };
+        ht_slash:         hold_tap_slash         { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>; bindings = <&m_backslash>, <&m_slash>; };
 
         space1sh: space_layer1_shift {
             compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>;
