@@ -149,7 +149,7 @@
 
         td_brace_angle: tap_dance_brace_angle {
             compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&kp RBRC>, <&kp LT>; // { <
+            bindings = <&kp LBRC>, <&kp LT>; // { <
         };
 
         td_dot: tap_dance_dot_comma {
