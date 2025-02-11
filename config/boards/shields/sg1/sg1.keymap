@@ -246,7 +246,7 @@
                 &trans       &trans       &mo 3        &tab2ctrl    &space1sh    &lt 1 SPACE &lt 2 RET     &lt 3 ESC   &mo 4       &num_word 1>; };
 //              ╰──        ──┴──        ──┴──        ──┴──        ──┴──       ──╯╰──       ──┴──         ──┴──       ──┴──       ──┴──      ──╯
 //                          hold         tap
-#define mt_dot           mt m_com       m_dot
+#define mt_dot           ht &m_com       &m_dot
 #define mt_min_plus      mt PLUS         MINUS
         layer1Num { bindings = <
 //╭─00─       ──┬─01─      ──┬─02─      ──┬─03─      ──┬─04─      ──╮                         ╭─05─      ──┬─06─     ──┬─07─     ──┬─08─    ──┬─09─      ──╮
