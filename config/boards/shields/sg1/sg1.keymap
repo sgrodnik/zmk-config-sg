@@ -133,7 +133,7 @@
       };
 
       ht_dot: hold_tap {  // fixme
-          compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; tapping-term-ms = <400>; quick-tap-ms = <200>;
+          compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-unless-interrupted"; tapping-term-ms = <400>; quick-tap-ms = <200>;
           bindings = <&m_com>, <&m_dot>;
       };
 
