@@ -143,11 +143,9 @@
         };
 
         space1sh: space_layer1_shift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>;
             bindings = <&lt 1 SPACE>, <&layer_mod 1 LSHIFT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         td_paren_bracket: tap_dance_paren_bracket {
