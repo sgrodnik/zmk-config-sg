@@ -227,7 +227,7 @@
         combo_copyA { timeout-ms = <50>; key-positions = <21 22   >; bindings = <&copy_all    >; layers = <1  >; };  // XC
         combo_pastA { timeout-ms = <50>; key-positions = <22 23   >; bindings = <&paste_all   >; layers = <1  >; };  // CV
         combo_macro1{ timeout-ms = <50>; key-positions = < 7 16   >; bindings = <&macro1      >; layers = <0  >; };  // IJ
-        // combo_sh1   { timeout-ms = <50>; key-positions = <13 34   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // FSpace
+        combo_sh1   { timeout-ms = <50>; key-positions = <12 34   >; bindings = <&layer_mod 1 LSHIFT>; layers = <0 1>; slow-release;};  // DSpace
         // combo_sh1_  { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // ER
         combo_capsw { key-positions = <10 20>; bindings = <&caps_word>;        layers = <0>; };  // AZ
         combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>;        layers = <0>; };  // DK
