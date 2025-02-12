@@ -35,23 +35,25 @@
           ;
       )
 
-      ZMK_MACRO(m_copy_all,   wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(HOME) &kp LC(LS(END)) &kp LC(INS) &kp LC(C)> ; )
-      ZMK_MACRO(m_paste_all,  wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(HOME) &kp LC(LS(END)) &kp LS(INS)> ; )
-      ZMK_MACRO(m_cut_all,    wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(HOME) &kp LC(LS(END)) &kp LS(DEL)> ; )
-      ZMK_MACRO(m_copy,       wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(INS) &kp LC(C)>      ; )
-      ZMK_MACRO(m_paste,      wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LS(INS)>                ; )
-      ZMK_MACRO(m_cut,        wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LS(DEL)>                ; )
-      ZMK_MACRO(m_backsp,     wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp BSPC>                   ; )
-      ZMK_MACRO(m_del_line,   wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp HOME &kp HOME &kp LS(END) &kp LS(RIGHT) &kp DEL> ; )
-      ZMK_MACRO(m_undo,       wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(Z)>                  ; )
-      ZMK_MACRO(m_redo,       wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(LS(Z))>              ; )
-      ZMK_MACRO(m_go_back,    wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LA(LEFT)>               ; )
-      ZMK_MACRO(m_close_tab,  wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(W)>                  ; )
-      ZMK_MACRO(m_new_tab,    wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(T)>                  ; )
-      ZMK_MACRO(m_reopen_tab, wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LC(LS(T))>              ; )
-      ZMK_MACRO(m_clip_man,   wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LG(V)>                  ; )
-      ZMK_MACRO(m_clip_prev,  wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp LG(V) &kp DOWN &kp RET> ; )
-      ZMK_MACRO(macro1,       wait-ms = <30>; tap-ms = <40>; bindings = <&macro_tap &kp STAR &kp LS(U) &kp LPAR &kp LS(I) &kp RPAR &kp LS(O) &kp UNDER &kp RET> ; )
+        #define short_m wait-ms = <30>; tap-ms = <40>; bindings =
+
+        ZMK_MACRO(m_copy_all,   short_m <&macro_tap &kp LC(HOME) &kp LC(LS(END)) &kp LC(INS) &kp LC(C)>                         ; )
+        ZMK_MACRO(m_paste_all,  short_m <&macro_tap &kp LC(HOME) &kp LC(LS(END)) &kp LS(INS)>                                   ; )
+        ZMK_MACRO(m_cut_all,    short_m <&macro_tap &kp LC(HOME) &kp LC(LS(END)) &kp LS(DEL)>                                   ; )
+        ZMK_MACRO(m_copy,       short_m <&macro_tap &kp LC(INS) &kp LC(C)>                                                      ; )
+        ZMK_MACRO(m_paste,      short_m <&macro_tap &kp LS(INS)>                                                                ; )
+        ZMK_MACRO(m_cut,        short_m <&macro_tap &kp LS(DEL)>                                                                ; )
+        ZMK_MACRO(m_backsp,     short_m <&macro_tap &kp BSPC>                                                                   ; )
+        ZMK_MACRO(m_del_line,   short_m <&macro_tap &kp HOME &kp HOME &kp LS(END) &kp LS(RIGHT) &kp DEL>                        ; )
+        ZMK_MACRO(m_undo,       short_m <&macro_tap &kp LC(Z)>                                                                  ; )
+        ZMK_MACRO(m_redo,       short_m <&macro_tap &kp LC(LS(Z))>                                                              ; )
+        ZMK_MACRO(m_go_back,    short_m <&macro_tap &kp LA(LEFT)>                                                               ; )
+        ZMK_MACRO(m_close_tab,  short_m <&macro_tap &kp LC(W)>                                                                  ; )
+        ZMK_MACRO(m_new_tab,    short_m <&macro_tap &kp LC(T)>                                                                  ; )
+        ZMK_MACRO(m_reopen_tab, short_m <&macro_tap &kp LC(LS(T))>                                                              ; )
+        ZMK_MACRO(m_clip_man,   short_m <&macro_tap &kp LG(V)>                                                                  ; )
+        ZMK_MACRO(m_clip_prev,  short_m <&macro_tap &kp LG(V) &kp DOWN &kp RET>                                                 ; )
+        ZMK_MACRO(macro1,       short_m <&macro_tap &kp STAR &kp LS(U) &kp LPAR &kp LS(I) &kp RPAR &kp LS(O) &kp UNDER &kp RET> ; )
 
         layer_mod: layer_mod {
             compatible = "zmk,behavior-macro-two-param";
@@ -156,24 +158,24 @@
             // retro-tap;
         };
 
-        #define stuff compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>;
+        #define short_ht compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; quick-tap-ms = <0>;
 
         //                                                           hold            tap
-        ht_dot:           hold_tap_dot           { stuff bindings = <&m_com>,       <&m_dot>; };
-        ht_paren_bracket: hold_tap_paren_bracket { stuff bindings = <&m_lbkt>,      <&m_lpar>; };
-        ht_brace_angle:   hold_tap_brace_angle   { stuff bindings = <&m_lt>,        <&m_lbrc>; };
-        ht_semi_colon:    hold_tap_semi_colon    { stuff bindings = <&m_colon>,     <&m_semicolon>; };
-        ht_quote_apos:    hold_tap_quote_apos    { stuff bindings = <&m_apos>,      <&m_quote>; };
-        // ht_under_minus:   hold_tap_under_minus   { stuff bindings = <&kp MINUS>, <&kp UNDER>; };
-        ht_slash:         hold_tap_slash         { stuff bindings = <&m_backslash>, <&m_slash>; };
-        ht_copy_all:      hold_tap_copy_all      { stuff bindings = <&m_copy_all>,  <&m_copy>; };
-        ht_paste_all:     hold_tap_paste_all     { stuff bindings = <&m_paste_all>, <&m_paste>; };
-        ht_cut_all:       hold_tap_cut_all       { stuff bindings = <&m_cut_all>,   <&m_cut>; };
-        ht_backsp_line:   hold_tap_backsp_line   { stuff bindings = <&m_del_line>,  <&m_backsp>; };
-        ht_clip_man:      hold_tap_clip_man_prev { stuff bindings = <&m_clip_prev>, <&m_clip_man>; };
-        ht_undo_redo:     hold_tap_undo_redo     { stuff bindings = <&m_redo>,      <&m_undo>; };
-        ht_back_clos:     hold_tap_go_back_close { stuff bindings = <&m_close_tab>, <&m_go_back>; };
-        ht_new_reop:      hold_tap_new_reop      { stuff bindings = <&m_reopen_tab>,<&m_new_tab>; };
+        ht_dot:           hold_tap_dot           { short_ht bindings = <&m_com>,       <&m_dot>; };
+        ht_paren_bracket: hold_tap_paren_bracket { short_ht bindings = <&m_lbkt>,      <&m_lpar>; };
+        ht_brace_angle:   hold_tap_brace_angle   { short_ht bindings = <&m_lt>,        <&m_lbrc>; };
+        ht_semi_colon:    hold_tap_semi_colon    { short_ht bindings = <&m_colon>,     <&m_semicolon>; };
+        ht_quote_apos:    hold_tap_quote_apos    { short_ht bindings = <&m_apos>,      <&m_quote>; };
+        // ht_under_minus:   hold_tap_under_minus   { short_ht bindings = <&kp MINUS>, <&kp UNDER>; };
+        ht_slash:         hold_tap_slash         { short_ht bindings = <&m_backslash>, <&m_slash>; };
+        ht_copy_all:      hold_tap_copy_all      { short_ht bindings = <&m_copy_all>,  <&m_copy>; };
+        ht_paste_all:     hold_tap_paste_all     { short_ht bindings = <&m_paste_all>, <&m_paste>; };
+        ht_cut_all:       hold_tap_cut_all       { short_ht bindings = <&m_cut_all>,   <&m_cut>; };
+        ht_backsp_line:   hold_tap_backsp_line   { short_ht bindings = <&m_del_line>,  <&m_backsp>; };
+        ht_clip_man:      hold_tap_clip_man_prev { short_ht bindings = <&m_clip_prev>, <&m_clip_man>; };
+        ht_undo_redo:     hold_tap_undo_redo     { short_ht bindings = <&m_redo>,      <&m_undo>; };
+        ht_back_clos:     hold_tap_go_back_close { short_ht bindings = <&m_close_tab>, <&m_go_back>; };
+        ht_new_reop:      hold_tap_new_reop      { short_ht bindings = <&m_reopen_tab>,<&m_new_tab>; };
 
         #define mt_under_minus      mt MINUS         UNDER
 
