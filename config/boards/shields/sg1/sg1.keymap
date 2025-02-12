@@ -73,17 +73,17 @@
                 ;
         };
 
-        // l1sh_macro: layer1_shift {
-        //     compatible = "zmk,behavior-macro";
-        //     wait-ms = <30>;
-        //     tap-ms = <30>;
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &mo 1 &kp LSHFT>
-        //         , <&macro_pause_for_release>
-        //         , <&macro_release &mo 1 &kp LSHFT>
-        //         ;
-        // };
+        m_cs_layer2: layer_mod_ctrl_shift_layer2 {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <30>;
+            tap-ms = <30>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mo 2 &kp LCTRL &kp LSHFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo 2 &kp LCTRL &kp LSHFT>
+                ;
+        };
 
       ZMK_MACRO(m_dot, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 46 = .
           = <&macro_press   &kp LALT>, <&macro_tap     &kp KP_N4 &kp KP_N6>, <&macro_release &kp LALT>; )
@@ -230,7 +230,7 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_del   { timeout-ms = <50>; key-positions = <10 11 12>; bindings = <&kp DEL      >; layers = <0 1>; };  // ASD
+        // combo_del   { timeout-ms = <50>; key-positions = <10 11 12>; bindings = <&kp DEL      >; layers = <0 1>; };  // ASD
         combo_del2  { timeout-ms = <50>; key-positions = <11 12 13>; bindings = <&kp DEL      >; layers = <0 1>; };  // SDF
         combo_esc   { timeout-ms = <50>; key-positions = <11 13   >; bindings = <&kp ESC      >; layers = <0 1>; };  // SF
         combo_bsp   { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp BSPC     >; layers = <0 1>; };  // SD
@@ -251,7 +251,9 @@
         combo_copyA { timeout-ms = <50>; key-positions = <21 22   >; bindings = <&copy_all    >; layers = <1  >; };  // XC
         combo_pastA { timeout-ms = <50>; key-positions = <22 23   >; bindings = <&paste_all   >; layers = <1  >; };  // CV
         combo_macro1{ timeout-ms = <50>; key-positions = < 7 16   >; bindings = <&macro1      >; layers = <0  >; };  // IJ
-        combo_sh1   { timeout-ms = <50>; key-positions = <12 34   >; bindings = <&layer_mod 1 LSHIFT>; layers = <0 1>; slow-release;};  // DSpace
+        combo_shift1{ timeout-ms = <50>; key-positions = <12 34   >; bindings = <&layer_mod 1 LSHIFT>; layers = <0>; slow-release;};  // Dspace
+        combo_ctrl2 { timeout-ms = <50>; key-positions = <13 33   >; bindings = <&layer_mod 2 LCTRL >; layers = <0>; slow-release;};  // Ftab
+        combo_shcl2 { timeout-ms = <50>; key-positions = <12 13 33>; bindings = <&m_cs_layer2       >; layers = <0>; slow-release;};  // Ftab
         // combo_sh1_  { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // ER
         combo_capsw { key-positions = <10 20>; bindings = <&caps_word>;            layers = <0>; };  // AZ
         combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>;            layers = <0>; };  // DK
@@ -262,7 +264,7 @@
         combo_under { key-positions = <13 23>; bindings = <&mt_under_minus      >; layers = <0>; };  // FV
         combo_slash { key-positions = <23 24>; bindings = <&ht_slash         0 0>; layers = <0>; };  // VB
         combo_search{ key-positions = <22 13>; bindings = <&m_search>;             layers = <0>; };  // CF
-        combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;           layers = <0>; };  // GSpace
+        combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;           layers = <0>; };  // Gspace
         combo_nav_wo{ key-positions = <14 34>; bindings = <&nav_word 2>;           layers = <0>; };  // Gtab
         combo_colonE{ key-positions = <04 14>; bindings = <&m_semicolon_end>;      layers = <0>; };  // TG
         combo_repeat{ key-positions = <02 03>; bindings = <&key_repeat >;          layers = <0>; };  // ER
