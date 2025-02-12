@@ -67,7 +67,7 @@
         ZMK_MACRO(m_new_tab,    short_m <&macro_tap &kp LC(T)>                                                                  ; )
         ZMK_MACRO(m_reopen_tab, short_m <&macro_tap &kp LC(LS(T))>                                                              ; )
         ZMK_MACRO(m_clip_man,   short_m <&macro_tap &kp LG(V)>                                                                  ; )
-        ZMK_MACRO(m_clip_prev,  short_m <&macro_tap &kp LG(V)>, <&macro_wait_time 400>, <&macro_tap &kp DOWN &kp DOWN &kp RET>  ; )
+        ZMK_MACRO(m_clip_prev,  short_m <&macro_tap &kp LG(V) &kp DOWN &kp DOWN &kp RET>                                        ; )
         ZMK_MACRO(m_search,     short_m <&macro_tap &kp LC(C) &kp LC(F) &kp LC(V)>                                              ; )
         ZMK_MACRO(macro1,       short_m <&macro_tap &kp STAR &kp LS(U) &kp LPAR &kp LS(I) &kp RPAR &kp LS(O) &kp UNDER &kp RET> ; )
 
