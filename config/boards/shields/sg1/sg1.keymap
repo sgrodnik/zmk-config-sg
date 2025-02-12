@@ -49,6 +49,10 @@
           = <&macro_tap &kp LS(DEL)> ;
       )
 
+      ZMK_MACRO(m_backsp, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp BSPC> ;
+      )
+
       ZMK_MACRO(m_copy_all, wait-ms = <30>; tap-ms = <40>; bindings
           = <&macro_tap   &kp LC(HOME)>
           , <&macro_tap   &kp LC(LS(END))>
@@ -69,6 +73,42 @@
           , <&macro_tap   &kp LC(LS(END))>
           , <&macro_tap   &kp LS(DEL)>
           ;
+      )
+
+      ZMK_MACRO(m_del_line, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp HOME &kp HOME &kp LS(END) &kp LS(RIGHT) &kp DEL> ;
+      )
+
+      ZMK_MACRO(m_undo, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp LC(Z)> ;
+      )
+
+      ZMK_MACRO(m_redo, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp LC(LS(Z))> ;
+      )
+
+      ZMK_MACRO(m_go_back, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp LA(LEFT)> ;
+      )
+
+      ZMK_MACRO(m_close_tab, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp LC(W)> ;
+      )
+
+      ZMK_MACRO(m_new_tab, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp LC(T)> ;
+      )
+
+      ZMK_MACRO(m_reopen_tab, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp LC(LS(T))> ;
+      )
+
+      ZMK_MACRO(m_clip_man, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp LG(V)> ;
+      )
+
+      ZMK_MACRO(m_clip_prev, wait-ms = <30>; tap-ms = <40>; bindings
+          = <&macro_tap &kp LG(V) &kp DOWN &kp RET> ;
       )
 
       ZMK_MACRO(macro1, wait-ms = <30>; tap-ms = <40>; bindings
@@ -191,6 +231,11 @@
         ht_copy_all:      hold_tap_copy_all      { stuff bindings = <&m_copy_all>,  <&m_copy>; };
         ht_paste_all:     hold_tap_paste_all     { stuff bindings = <&m_paste_all>, <&m_paste>; };
         ht_cut_all:       hold_tap_cut_all       { stuff bindings = <&m_cut_all>,   <&m_cut>; };
+        ht_backsp_line:   hold_tap_backsp_line   { stuff bindings = <&m_del_line>,  <&m_backsp>; };
+        ht_clip_man:      hold_tap_clip_man_prev { stuff bindings = <&m_clip_prev>, <&m_clip_man>; };
+        ht_undo_redo:     hold_tap_undo_redo     { stuff bindings = <&m_redo>,      <&m_undo>; };
+        ht_back_clos:     hold_tap_go_back_close { stuff bindings = <&m_close_tab>, <&m_go_back>; };
+        ht_new_reop:      hold_tap_new_reop      { stuff bindings = <&m_reopen_tab>,<&m_new_tab>; };
 
         #define mt_under_minus      mt MINUS         UNDER
 
@@ -278,26 +323,31 @@
         // combo_pastA { timeout-ms = <50>; key-positions = <22 23   >; bindings = <&paste_all   >; layers = <1  >; };  // CV
         combo_macro1{ timeout-ms = <50>; key-positions = < 7 16   >; bindings = <&macro1      >; layers = <0  >; };  // IJ
         combo_shift1{ timeout-ms = <50>; key-positions = <12 34   >; bindings = <&layer_mod 1 LSHIFT>; layers = <0>; slow-release;};  // Dspace
-        combo_ctrl2 { timeout-ms = <50>; key-positions = <13 33   >; bindings = <&layer_mod 2 LCTRL >; layers = <0>; slow-release;};  // Ftab
-        combo_shcl2 { timeout-ms = <50>; key-positions = <12 13 33>; bindings = <&m_cs_layer2       >; layers = <0>; slow-release;};  // DFtab
+        // combo_ctrl2 { timeout-ms = <50>; key-positions = <13 33   >; bindings = <&layer_mod 2 LCTRL >; layers = <0>; slow-release;};  // Ftab
+        // combo_shcl2 { timeout-ms = <50>; key-positions = <12 13 33>; bindings = <&m_cs_layer2       >; layers = <0>; slow-release;};  // DFtab
         // combo_sh1_  { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // ER
-        combo_capsw    { key-positions = <10 20>; bindings = <&caps_word>;            layers = <0>; };  // AZ
-        combo_capsw2   { key-positions = <12 17>; bindings = <&caps_word>;            layers = <0>; };  // DK
-        combo_brack1   { key-positions = <03 04>; bindings = <&ht_paren_bracket 0 0>; layers = <0>; };  // RT
-        combo_brack2   { key-positions = <13 14>; bindings = <&ht_brace_angle   0 0>; layers = <0>; };  // FG
-        combo_colon    { key-positions = <03 13>; bindings = <&ht_semi_colon    0 0>; layers = <0>; };  // RF
-        combo_quote    { key-positions = <02 12>; bindings = <&ht_quote_apos    0 0>; layers = <0>; };  // ED
-        combo_under    { key-positions = <13 23>; bindings = <&mt_under_minus      >; layers = <0>; };  // FV
-        combo_slash    { key-positions = <23 24>; bindings = <&ht_slash         0 0>; layers = <0>; };  // VB
-        combo_search   { key-positions = <22 13>; bindings = <&m_search>;             layers = <0>; };  // CF
-        combo_num_wo   { key-positions = <14 34>; bindings = <&num_word 1>;           layers = <0>; };  // Gspace
-        combo_nav_wo   { key-positions = <14 33>; bindings = <&nav_word 2>;           layers = <0>; };  // Gtab
-        combo_colonE   { key-positions = <04 14>; bindings = <&m_semicolon_end>;      layers = <0>; };  // TG
-        combo_repeat   { key-positions = <02 03>; bindings = <&key_repeat >;          layers = <0>; };  // ER
-        combo_al_tab   { key-positions = <11 33>; bindings = <&m_al_tab >;            layers = <0>; slow-release; };  // Stab
-        combo_copy_all { key-positions = <21 22>; bindings = <&ht_copy_all 0 0>;      layers = <0>; };  // XC
-        combo_paste_all{ key-positions = <22 23>; bindings = <&ht_paste_all 0 0>;     layers = <0>; };  // CV
-        combo_cut_all  { key-positions = <20 21>; bindings = <&ht_cut_all 0 0>;       layers = <0  >; };// ZX
+        combo_capsw    { key-positions = <10 20   >; bindings = <&caps_word>;            layers = <0>; };  // AZ
+        combo_capsw2   { key-positions = <12 17   >; bindings = <&caps_word>;            layers = <0>; };  // DK
+        combo_brack1   { key-positions = <03 04   >; bindings = <&ht_paren_bracket 0 0>; layers = <0>; };  // RT
+        combo_brack2   { key-positions = <13 14   >; bindings = <&ht_brace_angle   0 0>; layers = <0>; };  // FG
+        combo_colon    { key-positions = <03 13   >; bindings = <&ht_semi_colon    0 0>; layers = <0>; };  // RF
+        combo_quote    { key-positions = <02 12   >; bindings = <&ht_quote_apos    0 0>; layers = <0>; };  // ED
+        combo_under    { key-positions = <13 23   >; bindings = <&mt_under_minus      >; layers = <0>; };  // FV
+        combo_slash    { key-positions = <23 24   >; bindings = <&ht_slash         0 0>; layers = <0>; };  // VB
+        combo_search   { key-positions = <22 13   >; bindings = <&m_search>;             layers = <0>; };  // CF
+        combo_num_wo   { key-positions = <14 34   >; bindings = <&num_word 1>;           layers = <0>; };  // Gspace
+        combo_nav_wo   { key-positions = <14 33   >; bindings = <&nav_word 2>;           layers = <0>; };  // Gtab
+        combo_colonE   { key-positions = <04 14   >; bindings = <&m_semicolon_end>;      layers = <0>; };  // TG
+        combo_repeat   { key-positions = <02 03   >; bindings = <&key_repeat >;          layers = <0>; };  // ER
+        combo_al_tab   { key-positions = <11 33   >; bindings = <&m_al_tab >;            layers = <0>; slow-release; };  // Stab
+        combo_copy_all { key-positions = <21 22   >; bindings = <&ht_copy_all 0 0>;      layers = <0>; };  // XC
+        combo_paste_all{ key-positions = <22 23   >; bindings = <&ht_paste_all 0 0>;     layers = <0>; };  // CV
+        combo_cut_all  { key-positions = <20 21   >; bindings = <&ht_cut_all 0 0>;       layers = <0>; };  // ZX
+        combo_bsp_line { key-positions = <11 12   >; bindings = <&ht_backsp_line 0 0>;   layers = <0 1>; };// SD
+        combo_clip_man { key-positions = <21 22 23>; bindings = <&ht_clip_man 0 0>;      layers = <0>; };  // XCV
+        combo_undo     { key-positions = <10 11   >; bindings = <&ht_undo_redo 0 0>;     layers = <0>; };  // AS
+        combo_back_clos{ key-positions = <11 12   >; bindings = <&ht_back_clos 0 0>;     layers = <2>; };  // SD
+        combo_new_reop { key-positions = <12 13   >; bindings = <&ht_new_reop 0 0>;      layers = <2>; };  // DF
     };
 
 //  00q 01w 02e 03r 04t         05y 06u 07i 08o 09p
@@ -346,7 +396,7 @@
 //├─20─       ──┼─21─      ──┼─22─      ──┼─23─      ──┼─24─      ──┤                         ├─25─      ──┼─26─     ──┼─27─     ──┼─28─    ──┼─29─      ──┤
   &hm LSHFT V_DN &kp V_UP    &kp PLAY     &kp C_NEXT   &trans                                 &trans       &trans      &trans      &trans     &trans
 //╰──         ──┼── 30     ──┴── 31     ──┼── 32     ──┼── 33     ──┼── 34    ──╮╭── 35     ──┼── 36     ──┼── 37    ──┼── 38    ──┼── 39   ──┴──        ──╯
-                &trans       &trans       &trans       &trans       &kp LCTRL    &trans       &trans       &trans      &trans      &trans     >; };
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans      &trans      &trans     >; };
 //              ╰──        ──┴──        ──┴──        ──┴──        ──┴──       ──╯╰──        ──┴──        ──┴──       ──┴──       ──┴──      ──╯
         layer3Fun { bindings = <
 //╭─00─       ──┬─01─      ──┬─02─      ──┬─03─      ──┬─04─      ──╮                         ╭─05─      ──┬─06─     ──┬─07─     ──┬─08─    ──┬─09─      ──╮
