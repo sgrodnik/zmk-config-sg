@@ -265,7 +265,7 @@
         combo_slash { key-positions = <23 24>; bindings = <&ht_slash         0 0>; layers = <0>; };  // VB
         combo_search{ key-positions = <22 13>; bindings = <&m_search>;             layers = <0>; };  // CF
         combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;           layers = <0>; };  // Gspace
-        combo_nav_wo{ key-positions = <14 34>; bindings = <&nav_word 2>;           layers = <0>; };  // Gtab
+        combo_nav_wo{ key-positions = <14 33>; bindings = <&nav_word 2>;           layers = <0>; };  // Gtab
         combo_colonE{ key-positions = <04 14>; bindings = <&m_semicolon_end>;      layers = <0>; };  // TG
         combo_repeat{ key-positions = <02 03>; bindings = <&key_repeat >;          layers = <0>; };  // ER
         combo_al_tab{ key-positions = <11 33>; bindings = <&m_al_tab >;            layers = <0>; slow-release; };  // Stab
