@@ -98,6 +98,9 @@
       ZMK_MACRO(m_semicolon, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 59 = semicolon
           = <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N9>, <&macro_release &kp LALT>; )
 
+      ZMK_MACRO(m_semicolon_end, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 59 = semicolon
+          = <&macro_press &kp LALT>, <&macro_tap &kp END &kp KP_N5 &kp KP_N9>, <&macro_release &kp LALT>; )
+
       ZMK_MACRO(m_lpar, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 40 = (
           = <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N0>, <&macro_release &kp LALT>; )
 
@@ -230,16 +233,17 @@
         combo_macro1{ timeout-ms = <50>; key-positions = < 7 16   >; bindings = <&macro1      >; layers = <0  >; };  // IJ
         combo_sh1   { timeout-ms = <50>; key-positions = <12 34   >; bindings = <&layer_mod 1 LSHIFT>; layers = <0 1>; slow-release;};  // DSpace
         // combo_sh1_  { timeout-ms = <50>; key-positions = < 2  3   >; bindings = <&l1sh_macro  >; layers = <0 1>; slow-release;};  // ER
-        combo_capsw { key-positions = <10 20>; bindings = <&caps_word>;           layers = <0>; };  // AZ
-        combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>;           layers = <0>; };  // DK
+        combo_capsw { key-positions = <10 20>; bindings = <&caps_word>;            layers = <0>; };  // AZ
+        combo_capsw2{ key-positions = <12 17>; bindings = <&caps_word>;            layers = <0>; };  // DK
         combo_brack1{ key-positions = <03 04>; bindings = <&ht_paren_bracket 0 0>; layers = <0>; };  // RT
         combo_brack2{ key-positions = <13 14>; bindings = <&ht_brace_angle   0 0>; layers = <0>; };  // FG
         combo_colon { key-positions = <03 13>; bindings = <&ht_semi_colon    0 0>; layers = <0>; };  // RF
         combo_quote { key-positions = <02 12>; bindings = <&ht_quote_apos    0 0>; layers = <0>; };  // ED
         combo_under { key-positions = <13 23>; bindings = <&mt_under_minus      >; layers = <0>; };  // FV
         combo_slash { key-positions = <23 24>; bindings = <&ht_slash         0 0>; layers = <0>; };  // VB
-        combo_search{ key-positions = <22 13>; bindings = <&m_search>;            layers = <0>; };  // CF
-        combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;          layers = <0>; };  // GSpace
+        combo_search{ key-positions = <22 13>; bindings = <&m_search>;             layers = <0>; };  // CF
+        combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;           layers = <0>; };  // GSpace
+        combo_colonE{ key-positions = <04 14>; bindings = <&m_semicolon_end>;      layers = <0>; };  // TG
     };
 
 //  00q 01w 02e 03r 04t         05y 06u 07i 08o 09p
