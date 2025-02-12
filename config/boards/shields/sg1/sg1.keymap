@@ -258,7 +258,7 @@
         combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;           layers = <0>; };  // GSpace
         combo_colonE{ key-positions = <04 14>; bindings = <&m_semicolon_end>;      layers = <0>; };  // TG
         combo_repeat{ key-positions = <02 03>; bindings = <&key_repeat >;          layers = <0>; };  // ER
-        combo_al_tab{ key-positions = <11 33>; bindings = <&m_al_tab >;            layers = <0>; };  // Stab
+        combo_al_tab{ key-positions = <11 33>; bindings = <&m_al_tab >;            layers = <0>; slow-release; };  // Stab
     };
 
 //  00q 01w 02e 03r 04t         05y 06u 07i 08o 09p
