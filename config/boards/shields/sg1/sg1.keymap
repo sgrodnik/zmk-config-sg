@@ -242,6 +242,11 @@
         combo_num_wo{ key-positions = <14 34>; bindings = <&num_word 1>;          layers = <0>; };  // GSpace
     };
 
+//  00q 01w 02e 03r 04t         05y 06u 07i 08o 09p
+//  10a 11s 12d 13f 14g         15h 16j 17k 18l 19;
+//  20z 21x 22c 23v 24b         25n 26m 27, 28. 29/
+//      30  31  32  33t 34s 35s 36r 37e 38 39
+
     keymap {
         compatible = "zmk,keymap";
 
