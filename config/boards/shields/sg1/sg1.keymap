@@ -21,6 +21,11 @@
 #define hL    RALT L
 #define hSEMI RGUI SEMI
 
+&num_word {
+  continue-list = <BSPC SPACE>;
+  ignore-modifiers;
+};
+
 / {
     macros {
       ZMK_MACRO(task_manager, wait-ms = <30>; tap-ms = <40>; bindings
