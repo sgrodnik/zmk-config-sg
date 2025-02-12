@@ -25,15 +25,30 @@
   continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE>;
   ignore-modifiers;
 };
-
+//   888b     d888
+//   8888b   d8888
+//   88888b.d88888
+//   888Y88888P888  8888b.   .d8888b 888d888 .d88b.  .d8888b
+//   888 Y888P 888     "88b d88P"    888P"  d88""88b 88K
+//   888  Y8P  888 .d888888 888      888    888  888 "Y8888b.
+//   888   "   888 888  888 Y88b.    888    Y88..88P      X88
+//   888       888 "Y888888  "Y8888P 888     "Y88P"   88888P'
 / {
     macros {
-      ZMK_MACRO(task_manager, wait-ms = <30>; tap-ms = <40>; bindings
-          = <&macro_press   &kp LCTRL &kp LSHIFT>
-          , <&macro_tap     &kp ESC>
-          , <&macro_release &kp LSHIFT &kp LCTRL>
-          ;
-      )
+        ZMK_MACRO(task_manager, wait-ms = <30>; tap-ms = <40>; bindings
+            = <&macro_press   &kp LCTRL &kp LSHIFT>
+            , <&macro_tap     &kp ESC>
+            , <&macro_release &kp LSHIFT &kp LCTRL>
+            ;
+        )
+
+        ZMK_MACRO(m_al_tab, wait-ms = <30>; tap-ms = <40>; bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp TAB>
+            , <&macro_pause_for_release>
+            , <&macro_release &kp LALT>
+            ;
+        )
 
         #define short_m wait-ms = <30>; tap-ms = <40>; bindings =
 
@@ -56,27 +71,19 @@
         ZMK_MACRO(m_search,     short_m <&macro_tap &kp LC(C) &kp LC(F) &kp LC(V)>                                              ; )
         ZMK_MACRO(macro1,       short_m <&macro_tap &kp STAR &kp LS(U) &kp LPAR &kp LS(I) &kp RPAR &kp LS(O) &kp UNDER &kp RET> ; )
 
-        ZMK_MACRO(m_dot,          short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N6>,           <&macro_release &kp LALT>; ) // Alt + 46 = .
-        ZMK_MACRO(m_com,          short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N4>,           <&macro_release &kp LALT>; ) // Alt + 44 = ,
-        ZMK_MACRO(m_slash,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N7>,           <&macro_release &kp LALT>; ) // Alt + 47 = /
-        ZMK_MACRO(m_backslash,    short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N9 &kp KP_N2>,           <&macro_release &kp LALT>; ) // Alt + 92 = backslash
-        ZMK_MACRO(m_colon,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N8>,           <&macro_release &kp LALT>; ) // Alt + 58 = colon
-        ZMK_MACRO(m_semicolon,    short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N9>,           <&macro_release &kp LALT>; ) // Alt + 59 = semicolon
+        ZMK_MACRO(m_dot,          short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N6>, <&macro_release &kp LALT>; ) // Alt + 46 = .
+        ZMK_MACRO(m_com,          short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N4>, <&macro_release &kp LALT>; ) // Alt + 44 = ,
+        ZMK_MACRO(m_slash,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N7>, <&macro_release &kp LALT>; ) // Alt + 47 = /
+        ZMK_MACRO(m_backslash,    short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N9 &kp KP_N2>, <&macro_release &kp LALT>; ) // Alt + 92 = backslash
+        ZMK_MACRO(m_colon,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N8>, <&macro_release &kp LALT>; ) // Alt + 58 = colon
+        ZMK_MACRO(m_semicolon,    short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N9>, <&macro_release &kp LALT>; ) // Alt + 59 = semicolon
         ZMK_MACRO(m_semicolon_end,short_m <&macro_tap &kp END &m_semicolon>; )
-        ZMK_MACRO(m_lpar,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N0>,           <&macro_release &kp LALT>; ) // Alt + 40 = (
-        ZMK_MACRO(m_lbkt,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N9 &kp KP_N1>,           <&macro_release &kp LALT>; ) // Alt + 91 = [
+        ZMK_MACRO(m_lpar,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N0>, <&macro_release &kp LALT>; ) // Alt + 40 = (
+        ZMK_MACRO(m_lbkt,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N9 &kp KP_N1>, <&macro_release &kp LALT>; ) // Alt + 91 = [
         ZMK_MACRO(m_lbrc,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>, <&macro_release &kp LALT>; ) // Alt + 123 = {
-        ZMK_MACRO(m_lt,           short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N6 &kp KP_N0>,           <&macro_release &kp LALT>; ) // Alt + 60 = <
-        ZMK_MACRO(m_quote,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N4>,           <&macro_release &kp LALT>; ) // Alt + 34 = "
-        ZMK_MACRO(m_apos,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N9>,           <&macro_release &kp LALT>; ) // Alt + 39 = '
-
-        ZMK_MACRO(m_al_tab, wait-ms = <30>; tap-ms = <40>; bindings
-            = <&macro_press   &kp LALT>
-            , <&macro_tap     &kp TAB>
-            , <&macro_pause_for_release>
-            , <&macro_release &kp LALT>
-            ;
-        )
+        ZMK_MACRO(m_lt,           short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N6 &kp KP_N0>, <&macro_release &kp LALT>; ) // Alt + 60 = <
+        ZMK_MACRO(m_quote,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N4>, <&macro_release &kp LALT>; ) // Alt + 34 = "
+        ZMK_MACRO(m_apos,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N9>, <&macro_release &kp LALT>; ) // Alt + 39 = '
 
         layer_mod: layer_mod {
             compatible = "zmk,behavior-macro-two-param";
@@ -109,16 +116,27 @@
         };
     };
 
+
+//   888888b.            888                        d8b
+//   888  "88b           888                        Y8P
+//   888  .88P           888
+//   8888888K.   .d88b.  88888b.   8888b.  888  888 888  .d88b.  888d888 .d8888b
+//   888  "Y88b d8P  Y8b 888 "88b     "88b 888  888 888 d88""88b 888P"   88K
+//   888    888 88888888 888  888 .d888888 Y88  88P 888 888  888 888     "Y8888b.
+//   888   d88P Y8b.     888  888 888  888  Y8bd8P  888 Y88..88P 888          X88
+//   8888888P"   "Y8888  888  888 "Y888888   Y88P   888  "Y88P"  888      88888P'
+
+
     behaviors {
 
-      ht: left_positional_hold_tap {  // allows shift with mouse
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          flavor = "tap-unless-interrupted";
-          tapping-term-ms = <400>;
-          quick-tap-ms = <200>;
-          bindings = <&kp>, <&kp>;
-      };
+        ht: left_positional_hold_tap {  // allows shift with mouse
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
 
         hm: homerow_mods {  // allows repeating z
             compatible = "zmk,behavior-hold-tap";
@@ -163,46 +181,6 @@
             mods = <(MOD_LCTL)>; keep-mods = <(MOD_LCTL)>;
         };
 
-        td_paren_bracket: tap_dance_paren_bracket {
-            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&m_lpar>, <&m_lbkt>; // ( [
-        };
-
-        td_brace_angle: tap_dance_brace_angle {
-            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&m_lbrc>, <&m_lt>; // { <
-        };
-
-        td_semi_colon: tap_dance_semicolon_colon {
-            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&m_semicolon>, <&m_colon>; // ; :
-        };
-
-        td_quote_apos: tap_dance_quote_apos {
-            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&m_quote>, <&m_apos>; // " '
-        };
-
-        td_under_minus: tap_dance_under_minus {
-            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&kp UNDER>, <&kp MINUS>; // _ -
-        };
-
-        td_min_plus: tap_dance_minus_plus {
-            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>;
-            bindings = <&kp MINUS>, <&kp PLUS>; // - +
-        };
-
-        td_dot: tap_dance_dot_comma {
-            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>;
-            bindings = <&m_dot>, <&m_com>;
-        };
-
-        td_slash: tap_dance_slash_backslash {
-            compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>;
-            bindings = <&m_slash>, <&m_backslash>;
-        };
-
         nav_word: nav_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
@@ -211,10 +189,20 @@
         };
     };
 
+
+//     .d8888b.                         888
+//    d88P  Y88b                        888
+//    888    888                        888
+//    888         .d88b.  88888b.d88b.  88888b.   .d88b.  .d8888b
+//    888        d88""88b 888 "888 "88b 888 "88b d88""88b 88K
+//    888    888 888  888 888  888  888 888  888 888  888 "Y8888b.
+//    Y88b  d88P Y88..88P 888  888  888 888 d88P Y88..88P      X88
+//     "Y8888P"   "Y88P"  888  888  888 88888P"   "Y88P"   88888P'
+
+
     combos {
         compatible = "zmk,combos";
-        // combo_del   { timeout-ms = <50>; key-positions = <10 11 12>; bindings = <&kp DEL      >; layers = <0 1>; };  // ASD
-        combo_del2  { timeout-ms = <50>; key-positions = <11 12 13>; bindings = <&kp DEL      >; layers = <0 1>; };  // SDF
+        combo_del   { timeout-ms = <50>; key-positions = <11 12 13>; bindings = <&kp DEL      >; layers = <0 1>; };  // SDF
         combo_esc   { timeout-ms = <50>; key-positions = <11 13   >; bindings = <&kp ESC      >; layers = <0 1>; };  // SF
         combo_bsp   { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp BSPC     >; layers = <0 1>; };  // SD
         combo_ret   { timeout-ms = <50>; key-positions = <12 13   >; bindings = <&kp RET      >; layers = <0 1>; };  // DF
@@ -266,6 +254,20 @@
 //  10a 11s 12d 13f 14g         15h 16j 17k 18l 19;
 //  20z 21x 22c 23v 24b         25n 26m 27, 28. 29/
 //      30  31  32  33t 34s 35s 36r 37e 38 39
+
+
+//   888    d8P
+//   888   d8P
+//   888  d8P
+//   888d88K      .d88b.  888  888 88888b.d88b.   8888b.  88888b.
+//   8888888b    d8P  Y8b 888  888 888 "888 "88b     "88b 888 "88b
+//   888  Y88b   88888888 888  888 888  888  888 .d888888 888  888
+//   888   Y88b  Y8b.     Y88b 888 888  888  888 888  888 888 d88P
+//   888    Y88b  "Y8888   "Y88888 888  888  888 "Y888888 88888P"
+//                             888                        888
+//                        Y8b d88P                        888
+//                         "Y88P"                         888
+
 
     keymap {
         compatible = "zmk,keymap";
