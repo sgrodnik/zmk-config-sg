@@ -53,7 +53,30 @@
         ZMK_MACRO(m_reopen_tab, short_m <&macro_tap &kp LC(LS(T))>                                                              ; )
         ZMK_MACRO(m_clip_man,   short_m <&macro_tap &kp LG(V)>                                                                  ; )
         ZMK_MACRO(m_clip_prev,  short_m <&macro_tap &kp LG(V) &kp DOWN &kp RET>                                                 ; )
+        ZMK_MACRO(m_search,     short_m <&macro_tap &kp LC(C) &kp LC(F) &kp LC(V)>                                              ; )
         ZMK_MACRO(macro1,       short_m <&macro_tap &kp STAR &kp LS(U) &kp LPAR &kp LS(I) &kp RPAR &kp LS(O) &kp UNDER &kp RET> ; )
+
+        ZMK_MACRO(m_dot,          short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N6>,           <&macro_release &kp LALT>; ) // Alt + 46 = .
+        ZMK_MACRO(m_com,          short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N4>,           <&macro_release &kp LALT>; ) // Alt + 44 = ,
+        ZMK_MACRO(m_slash,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N7>,           <&macro_release &kp LALT>; ) // Alt + 47 = /
+        ZMK_MACRO(m_backslash,    short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N9 &kp KP_N2>,           <&macro_release &kp LALT>; ) // Alt + 92 = backslash
+        ZMK_MACRO(m_colon,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N8>,           <&macro_release &kp LALT>; ) // Alt + 58 = colon
+        ZMK_MACRO(m_semicolon,    short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N9>,           <&macro_release &kp LALT>; ) // Alt + 59 = semicolon
+        ZMK_MACRO(m_semicolon_end,short_m <&macro_tap &kp END &m_semicolon>; )
+        ZMK_MACRO(m_lpar,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N0>,           <&macro_release &kp LALT>; ) // Alt + 40 = (
+        ZMK_MACRO(m_lbkt,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N9 &kp KP_N1>,           <&macro_release &kp LALT>; ) // Alt + 91 = [
+        ZMK_MACRO(m_lbrc,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>, <&macro_release &kp LALT>; ) // Alt + 123 = {
+        ZMK_MACRO(m_lt,           short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N6 &kp KP_N0>,           <&macro_release &kp LALT>; ) // Alt + 60 = <
+        ZMK_MACRO(m_quote,        short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N4>,           <&macro_release &kp LALT>; ) // Alt + 34 = "
+        ZMK_MACRO(m_apos,         short_m <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N9>,           <&macro_release &kp LALT>; ) // Alt + 39 = '
+
+        ZMK_MACRO(m_al_tab, wait-ms = <30>; tap-ms = <40>; bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp TAB>
+            , <&macro_pause_for_release>
+            , <&macro_release &kp LALT>
+            ;
+        )
 
         layer_mod: layer_mod {
             compatible = "zmk,behavior-macro-two-param";
@@ -84,57 +107,6 @@
                 , <&macro_release &mo 2 &kp LCTRL &kp LSHFT>
                 ;
         };
-
-      ZMK_MACRO(m_dot, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 46 = .
-          = <&macro_press   &kp LALT>, <&macro_tap     &kp KP_N4 &kp KP_N6>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_com, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 44 = ,
-          = <&macro_press   &kp LALT>, <&macro_tap     &kp KP_N4 &kp KP_N4>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_slash, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 47 = /
-          = <&macro_press   &kp LALT>, <&macro_tap     &kp KP_N4 &kp KP_N7>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_backslash, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 92 = backslash
-          = <&macro_press   &kp LALT>, <&macro_tap     &kp KP_N9 &kp KP_N2>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_colon, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 58 = colon
-          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N8>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_semicolon, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 59 = semicolon
-          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N5 &kp KP_N9>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_semicolon_end, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 59 = semicolon
-          = <&macro_press &kp LALT>, <&macro_tap &kp END &kp KP_N5 &kp KP_N9>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_lpar, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 40 = (
-          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N4 &kp KP_N0>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_lbkt, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 91 = [
-          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N9 &kp KP_N1>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_lbrc, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 123 = {
-          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_lt, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 60 = <
-          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N6 &kp KP_N0>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_quote, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 34 = "
-          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N4>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_apos, wait-ms = <30>; tap-ms = <40>; bindings // Alt + 39 = '
-          = <&macro_press &kp LALT>, <&macro_tap &kp KP_N3 &kp KP_N9>, <&macro_release &kp LALT>; )
-
-      ZMK_MACRO(m_search, wait-ms = <30>; tap-ms = <40>; bindings
-          = <&macro_tap &kp LC(C) &kp LC(F) &kp LC(V)>;
-      )
-
-      ZMK_MACRO(m_al_tab, wait-ms = <30>; tap-ms = <40>; bindings
-          = <&macro_press   &kp LALT>
-          , <&macro_tap     &kp TAB>
-          , <&macro_pause_for_release>
-          , <&macro_release &kp LALT>
-          ;
-      )
     };
 
     behaviors {
