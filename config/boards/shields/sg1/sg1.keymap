@@ -203,6 +203,7 @@
     combos {
         compatible = "zmk,combos";
         combo_del   { timeout-ms = <50>; key-positions = <11 12 13>; bindings = <&kp DEL      >; layers = <0 1>; };  // SDF
+        combo_del2  { timeout-ms = <50>; key-positions = <01 02   >; bindings = <&kp DEL      >; layers = <0 1>; };  // WE
         combo_esc   { timeout-ms = <50>; key-positions = <11 13   >; bindings = <&kp ESC      >; layers = <0 1 2>; };  // SF
         // combo_bsp   { timeout-ms = <50>; key-positions = <11 12   >; bindings = <&kp BSPC     >; layers = <0 1>; };  // SD
         combo_ret   { timeout-ms = <50>; key-positions = <12 13   >; bindings = <&kp RET      >; layers = <0 1>; };  // DF
